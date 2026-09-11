@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://bwa3lmj8tbo85"]
+
+[ext_resource type="Texture2D" uid="uid://tlojmgrhivis" path="res://assets/test_Bg.jpg" id="1_ap7fl"]
+[ext_resource type="Texture2D" uid="uid://cbn66kbvg6ig4" path="res://assets/fensterbar.png" id="2_my6bn"]
+[ext_resource type="FontFile" uid="uid://bqkw42vmy22rk" path="res://assets/schrift/HomeVideo-Regular.otf" id="6_prt1n"]
+[ext_resource type="Texture2D" uid="uid://bcit0bybh70hs" path="res://assets/schliesenbutton.png" id="7_3ye48"]
+[ext_resource type="Texture2D" uid="uid://cj1tfiyjihjva" path="res://assets/verkleinernbutton.png" id="8_sn3d1"]
+[ext_resource type="Texture2D" uid="uid://cjt3ch6numg4o" path="res://assets/restorebutton.png" id="9_uhxdx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.8980392, 0.5686275, 0.7372549, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57qmd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Window" type="Node2D" unique_id=264861115]
+position = Vector2(548, 319)
+
+[node name="2140" type="Sprite2D" parent="." unique_id=2088686814]
+position = Vector2(40.000023, 63.999985)
+scale = Vector2(2.648195, 2.749783)
+texture = ExtResource("1_ap7fl")
+
+[node name="Panel" type="Panel" parent="." unique_id=1029350891]
+offset_left = -288.0
+offset_top = -287.0
+offset_right = 296.0
+offset_bottom = -231.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+
+[node name="Fensterbar" type="Sprite2D" parent="Panel" unique_id=1444739193]
+texture_filter = 1
+position = Vector2(382, -5)
+scale = Vector2(35.797775, 7.448003)
+texture = ExtResource("2_my6bn")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1275609331]
+layout_mode = 0
+offset_left = -258.0
+offset_top = -25.0
+offset_right = 310.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("6_prt1n")
+theme_override_font_sizes/font_size = 32
+text = "Game.exe"
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Panel" unique_id=666345636]
+texture_filter = 1
+layout_mode = 0
+offset_left = 961.0
+offset_top = -27.0
+offset_right = 999.0
+offset_bottom = 11.0
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57qmd")
+icon = ExtResource("7_3ye48")
+
+[node name="Button2" type="Button" parent="Panel" unique_id=701293848]
+texture_filter = 1
+layout_mode = 0
+offset_left = 874.0
+offset_top = -27.0
+offset_right = 912.0
+offset_bottom = 11.0
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57qmd")
+icon = ExtResource("8_sn3d1")
+
+[node name="Restorebutton" type="Sprite2D" parent="Panel" unique_id=1439504032]
+texture_filter = 1
+position = Vector2(939, -6)
+texture = ExtResource("9_uhxdx")
+
+[connection signal="mouse_entered" from="Panel" to="Panel" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Panel" to="Panel" method="_on_mouse_exited"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]

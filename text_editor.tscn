@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dcuxba5l2ohsx"]
+
+[ext_resource type="Script" uid="uid://d2gn2k4la2pof" path="res://text_editor.gd" id="1_pj4mx"]
+[ext_resource type="FontFile" uid="uid://0arwda25b4ig" path="res://assets/schrift/ByteBounce.ttf" id="2_l8mbs"]
+
+[node name="Text Editor" type="Node2D" unique_id=92490128]
+script = ExtResource("1_pj4mx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1286159980]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=863065913]
+offset_right = 1282.0
+offset_bottom = 737.0
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=1616546356]
+offset_left = -1.0
+offset_top = 497.0
+offset_right = 651.0
+offset_bottom = 556.0
+color = Color(0.87058824, 0.8745098, 0.7411765, 0.7647059)
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=2106432616]
+offset_left = 7.0
+offset_top = 9.0
+offset_right = 629.0
+offset_bottom = 651.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_l8mbs")
+theme_override_font_sizes/font_size = 35
+text = "text.text ffffffffffffffffffff"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=602993592]
+position = Vector2(325, 362)
+zoom = Vector2(2, 1)

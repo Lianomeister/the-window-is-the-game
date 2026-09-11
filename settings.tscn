@@ -1,0 +1,658 @@
+[gd_scene format=3 uid="uid://csynknmtkgkod"]
+
+[ext_resource type="FontFile" uid="uid://ka4jtrufml3d" path="res://assets/schrift/PixelPurl.ttf" id="1_3ykye"]
+[ext_resource type="Script" uid="uid://f036e0ltlfnx" path="res://settings.gd" id="1_cj1lu"]
+[ext_resource type="Script" uid="uid://bvtto3nuhwo7w" path="res://setting_screens.gd" id="3_71mqq"]
+[ext_resource type="FontFile" uid="uid://bux8vfmgwrpw4" path="res://assets/schrift/LowresPixel-Regular.otf" id="3_cj1lu"]
+[ext_resource type="FontFile" uid="uid://bqkw42vmy22rk" path="res://assets/schrift/HomeVideo-Regular.otf" id="4_gc0em"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2dog"]
+bg_color = Color(0.12005124, 0.12005126, 0.12005118, 0.32941177)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.23457724, 0.32243934, 0.69523394, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cj1lu"]
+bg_color = Color(0.17946506, 0.28494716, 0.69464636, 0.32941177)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.35361108, 0.45827293, 0.8482369, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.05860988, 0.09900122, 0.20450264, 0.42745098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71mqq"]
+bg_color = Color(0.18029064, 0.2606823, 0.4729944, 0.42745098)
+
+[sub_resource type="Gradient" id="Gradient_cj1lu"]
+offsets = PackedFloat32Array(0.017482517, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3j6r5"]
+gradient = SubResource("Gradient_cj1lu")
+width = 15
+height = 2
+
+[sub_resource type="ImageTexture" id="ImageTexture_71mqq"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_3j6r5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3j6r5"]
+bg_color = Color(0.14509805, 0.21176471, 0.3882353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wf4hb"]
+bg_color = Color(0.19215687, 0.27450982, 0.4862745, 1)
+
+[sub_resource type="Theme" id="Theme_q1jjh"]
+default_font = ExtResource("4_gc0em")
+PopupMenu/fonts/font = ExtResource("4_gc0em")
+PopupMenu/fonts/title_font = ExtResource("4_gc0em")
+PopupMenu/icons/radio_checked = SubResource("GradientTexture2D_3j6r5")
+PopupMenu/icons/radio_checked_disabled = SubResource("ImageTexture_71mqq")
+PopupMenu/icons/radio_unchecked = SubResource("GradientTexture2D_3j6r5")
+PopupMenu/icons/radio_unchecked_disabled = SubResource("ImageTexture_3j6r5")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_3j6r5")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_wf4hb")
+
+[sub_resource type="Gradient" id="Gradient_gc0em"]
+colors = PackedColorArray(0.7058824, 0.79607844, 0.95686275, 1, 0.7058824, 0.79607844, 0.95686275, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fcnqv"]
+gradient = SubResource("Gradient_gc0em")
+width = 10
+height = 30
+fill_from = Vector2(0.05631399, 0.33617747)
+
+[sub_resource type="Gradient" id="Gradient_71mqq"]
+offsets = PackedFloat32Array(0.0040214476, 1)
+colors = PackedColorArray(0.59607846, 0.7176471, 0.9372549, 1, 0.59560657, 0.7176974, 0.9376618, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cj1lu"]
+gradient = SubResource("Gradient_71mqq")
+width = 10
+height = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57qmd"]
+bg_color = Color(0.38039216, 0.54901963, 0.87058824, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.37965953, 0.54756904, 0.8698678, 1)
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0u6y"]
+bg_color = Color(0.56392306, 0.69290483, 0.93229145, 1)
+border_color = Color(0.17578533, 0.33997902, 0.85821, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3gngh"]
+bg_color = Color(0.46091068, 0.6095101, 0.8969017, 1)
+
+[node name="Settings" type="Node2D" unique_id=45953351]
+script = ExtResource("1_cj1lu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=408202544]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=389813408]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.37742275, 0.57537293, 0.7745725, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=2140534189]
+offset_right = 324.0
+offset_bottom = 721.0
+color = Color(0.2, 0.28235295, 0.87058824, 1)
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=97888755]
+offset_top = 92.0
+offset_right = 325.0
+offset_bottom = 174.0
+theme_override_fonts/font = ExtResource("1_3ykye")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_q2dog")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cj1lu")
+text = "Display"
+
+[node name="Button2" type="Button" parent="CanvasLayer" unique_id=290795061]
+offset_top = 204.0
+offset_right = 325.0
+offset_bottom = 286.0
+theme_override_fonts/font = ExtResource("1_3ykye")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_q2dog")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cj1lu")
+text = "Audio"
+
+[node name="Apply" type="Button" parent="CanvasLayer" unique_id=1298202617]
+offset_left = 1048.0
+offset_top = 616.0
+offset_right = 1256.75
+offset_bottom = 698.0
+scale = Vector2(0.9600072, 0.9600072)
+theme_override_fonts/font = ExtResource("1_3ykye")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_q2dog")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cj1lu")
+text = "Apply"
+
+[node name="Button3" type="Button" parent="CanvasLayer" unique_id=358915717]
+offset_top = 319.0
+offset_right = 325.0
+offset_bottom = 401.0
+theme_override_fonts/font = ExtResource("1_3ykye")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_q2dog")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_q2dog")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cj1lu")
+text = "Gameplay"
+
+[node name="Button4" type="Button" parent="CanvasLayer" unique_id=1918986889]
+offset_top = 431.0
+offset_right = 325.0
+offset_bottom = 513.0
+theme_override_fonts/font = ExtResource("1_3ykye")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_q2dog")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cj1lu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cj1lu")
+text = "Accessibility"
+
+[node name="Button5" type="Button" parent="CanvasLayer" unique_id=1728302973]
+visible = false
+offset_top = 543.0
+offset_right = 325.0
+offset_bottom = 625.0
+theme_override_fonts/font = ExtResource("1_3ykye")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_q2dog")
+text = "Display"
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1093725841]
+offset_top = 5.0
+offset_right = 325.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("1_3ykye")
+theme_override_font_sizes/font_size = 75
+text = "Settings"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Label" unique_id=220918]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 324.0
+offset_bottom = 69.0
+color = Color(0, 0, 0, 0.078431375)
+
+[node name="Setting_screens" type="ColorRect" parent="CanvasLayer" unique_id=2079260962]
+offset_left = 324.0
+offset_right = 1280.0
+offset_bottom = 70.0
+color = Color(0.2, 0.28235295, 0.87058824, 1)
+script = ExtResource("3_71mqq")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Setting_screens" unique_id=2008149630]
+wait_time = 5.0
+autostart = true
+
+[node name="Display" type="ColorRect" parent="CanvasLayer/Setting_screens" unique_id=892110796]
+visible = false
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 70.0
+color = Color(0, 0, 0, 0.12941177)
+
+[node name="Label2" type="Label" parent="CanvasLayer/Setting_screens/Display" unique_id=148718337]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 12.0
+offset_right = 334.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("3_cj1lu")
+theme_override_font_sizes/font_size = 42
+text = "Display"
+
+[node name="Label" type="Label" parent="CanvasLayer/Setting_screens/Display" unique_id=1445343627]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 110.0
+offset_right = 418.0
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 60
+text = "Fullscreen"
+uppercase = true
+
+[node name="Button" type="Button" parent="CanvasLayer/Setting_screens/Display/Label" unique_id=1524203894]
+layout_mode = 0
+offset_left = 497.0
+offset_right = 599.25
+offset_bottom = 81.0
+scale = Vector2(0.6537844, 0.6537844)
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxFlat_g4v7s")
+text = "ON"
+
+[node name="Label3" type="Label" parent="CanvasLayer/Setting_screens/Display" unique_id=19348712]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 195.0
+offset_right = 454.0
+offset_bottom = 250.0
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 60
+text = "Window Mode"
+uppercase = true
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Setting_screens/Display/Label3" unique_id=437263353]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 3.0
+offset_right = 764.0
+offset_bottom = 54.0
+theme = SubResource("Theme_q1jjh")
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_71mqq")
+selected = 1
+item_count = 2
+popup/item_0/text = " Windowed"
+popup/item_0/id = 0
+popup/item_1/text = " Fullscreen"
+popup/item_1/id = 1
+
+[node name="Label4" type="Label" parent="CanvasLayer/Setting_screens/Display" unique_id=1432302211]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 280.0
+offset_right = 418.0
+offset_bottom = 335.0
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 60
+text = "VSync"
+uppercase = true
+
+[node name="Button" type="Button" parent="CanvasLayer/Setting_screens/Display/Label4" unique_id=106839187]
+layout_mode = 0
+offset_left = 497.0
+offset_right = 599.25
+offset_bottom = 81.0
+scale = Vector2(0.6537844, 0.6537844)
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxFlat_g4v7s")
+text = "ON"
+
+[node name="Audio" type="ColorRect" parent="CanvasLayer/Setting_screens" unique_id=1942163221]
+layout_mode = 0
+offset_right = 123.0
+offset_bottom = 70.0
+color = Color(0, 0, 0, 0.12941177)
+
+[node name="Label2" type="Label" parent="CanvasLayer/Setting_screens/Audio" unique_id=1871447042]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 12.0
+offset_right = 334.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("3_cj1lu")
+theme_override_font_sizes/font_size = 42
+text = "Audio"
+
+[node name="Label" type="Label" parent="CanvasLayer/Setting_screens/Audio" unique_id=2068706492]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 110.0
+offset_right = 525.0
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 60
+text = "Master Volume"
+uppercase = true
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Setting_screens/Audio/Label" unique_id=877019276]
+layout_mode = 0
+offset_left = 633.0
+offset_top = 4.9999995
+offset_right = 785.0
+offset_bottom = 35.0
+scale = Vector2(1.4702399, 1.4702399)
+theme_override_icons/grabber = SubResource("GradientTexture2D_fcnqv")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_cj1lu")
+theme_override_icons/grabber_disabled = SubResource("GradientTexture2D_fcnqv")
+theme_override_icons/tick = SubResource("GradientTexture2D_fcnqv")
+theme_override_styles/slider = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_d0u6y")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_3gngh")
+value = 50.0
+
+[node name="Label3" type="Label" parent="CanvasLayer/Setting_screens/Audio" unique_id=1133171421]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 196.0
+offset_right = 525.0
+offset_bottom = 251.0
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 60
+text = "Music Volume"
+uppercase = true
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Setting_screens/Audio/Label3" unique_id=1722569345]
+layout_mode = 0
+offset_left = 634.0
+offset_top = 4.9999995
+offset_right = 786.0
+offset_bottom = 35.0
+scale = Vector2(1.4702399, 1.4702399)
+theme_override_icons/grabber = SubResource("GradientTexture2D_fcnqv")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_cj1lu")
+theme_override_icons/grabber_disabled = SubResource("GradientTexture2D_fcnqv")
+theme_override_icons/tick = SubResource("GradientTexture2D_fcnqv")
+theme_override_styles/slider = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_d0u6y")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_3gngh")
+value = 50.0
+
+[node name="Label4" type="Label" parent="CanvasLayer/Setting_screens/Audio" unique_id=881481124]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 277.0
+offset_right = 525.0
+offset_bottom = 332.0
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 60
+text = "SFX Volume"
+uppercase = true
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Setting_screens/Audio/Label4" unique_id=1726792708]
+layout_mode = 0
+offset_left = 633.0
+offset_top = 4.9999995
+offset_right = 785.0
+offset_bottom = 35.0
+scale = Vector2(1.4702399, 1.4702399)
+theme_override_icons/grabber = SubResource("GradientTexture2D_fcnqv")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_cj1lu")
+theme_override_icons/grabber_disabled = SubResource("GradientTexture2D_fcnqv")
+theme_override_icons/tick = SubResource("GradientTexture2D_fcnqv")
+theme_override_styles/slider = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_d0u6y")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_3gngh")
+value = 50.0
+
+[node name="Label5" type="Label" parent="CanvasLayer/Setting_screens/Audio" unique_id=705882202]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 358.0
+offset_right = 597.0
+offset_bottom = 413.0
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 60
+text = "Narrator Volume"
+uppercase = true
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Setting_screens/Audio/Label5" unique_id=15448185]
+layout_mode = 0
+offset_left = 633.0
+offset_top = 4.9999995
+offset_right = 785.0
+offset_bottom = 35.0
+scale = Vector2(1.4702399, 1.4702399)
+theme_override_icons/grabber = SubResource("GradientTexture2D_fcnqv")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_cj1lu")
+theme_override_icons/grabber_disabled = SubResource("GradientTexture2D_fcnqv")
+theme_override_icons/tick = SubResource("GradientTexture2D_fcnqv")
+theme_override_styles/slider = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_d0u6y")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_3gngh")
+value = 50.0
+
+[node name="Gameplay" type="ColorRect" parent="CanvasLayer/Setting_screens" unique_id=1747482787]
+visible = false
+layout_mode = 0
+offset_right = 214.0
+offset_bottom = 70.0
+color = Color(0, 0, 0, 0.12941177)
+
+[node name="Label2" type="Label" parent="CanvasLayer/Setting_screens/Gameplay" unique_id=2113407112]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 12.0
+offset_right = 334.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("3_cj1lu")
+theme_override_font_sizes/font_size = 42
+text = "Gameplay"
+
+[node name="Label" type="Label" parent="CanvasLayer/Setting_screens/Gameplay" unique_id=929141824]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 110.0
+offset_right = 670.0
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 60
+text = "Mouse sensitivity"
+uppercase = true
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Setting_screens/Gameplay/Label" unique_id=2127945082]
+layout_mode = 0
+offset_left = 633.0
+offset_top = 4.9999995
+offset_right = 785.0
+offset_bottom = 35.0
+scale = Vector2(1.4702399, 1.4702399)
+theme_override_icons/grabber = SubResource("GradientTexture2D_fcnqv")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_cj1lu")
+theme_override_icons/grabber_disabled = SubResource("GradientTexture2D_fcnqv")
+theme_override_icons/tick = SubResource("GradientTexture2D_fcnqv")
+theme_override_styles/slider = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_d0u6y")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_3gngh")
+value = 50.0
+
+[node name="Label4" type="Label" parent="CanvasLayer/Setting_screens/Gameplay" unique_id=35516087]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 208.0
+offset_right = 526.0
+offset_bottom = 263.0
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 60
+text = "Text Speed"
+uppercase = true
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Setting_screens/Gameplay/Label4" unique_id=1370289904]
+layout_mode = 0
+offset_left = 633.0
+offset_top = 4.9999995
+offset_right = 785.0
+offset_bottom = 35.0
+scale = Vector2(1.4702399, 1.4702399)
+theme_override_icons/grabber = SubResource("GradientTexture2D_fcnqv")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_cj1lu")
+theme_override_icons/grabber_disabled = SubResource("GradientTexture2D_fcnqv")
+theme_override_icons/tick = SubResource("GradientTexture2D_fcnqv")
+theme_override_styles/slider = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_d0u6y")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_3gngh")
+value = 50.0
+
+[node name="Label3" type="Label" parent="CanvasLayer/Setting_screens/Gameplay" unique_id=957298271]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 301.0
+offset_right = 526.0
+offset_bottom = 356.0
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 60
+text = "Show tutorial"
+uppercase = true
+
+[node name="Button" type="Button" parent="CanvasLayer/Setting_screens/Gameplay/Label3" unique_id=1038209067]
+layout_mode = 0
+offset_left = 634.0
+offset_right = 736.25
+offset_bottom = 81.0
+scale = Vector2(0.6537844, 0.6537844)
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxFlat_g4v7s")
+text = "ON"
+
+[node name="Accesibility" type="ColorRect" parent="CanvasLayer/Setting_screens" unique_id=1750445391]
+visible = false
+layout_mode = 0
+offset_right = 254.0
+offset_bottom = 70.0
+color = Color(0, 0, 0, 0.12941177)
+
+[node name="Label2" type="Label" parent="CanvasLayer/Setting_screens/Accesibility" unique_id=1587332574]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 12.0
+offset_right = 334.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("3_cj1lu")
+theme_override_font_sizes/font_size = 42
+text = "Accesibility"
+
+[node name="Label" type="Label" parent="CanvasLayer/Setting_screens/Accesibility" unique_id=702921993]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 110.0
+offset_right = 418.0
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 60
+text = "screen shake"
+uppercase = true
+
+[node name="Button" type="Button" parent="CanvasLayer/Setting_screens/Accesibility/Label" unique_id=1428237526]
+layout_mode = 0
+offset_left = 632.0
+offset_right = 734.25
+offset_bottom = 81.0
+scale = Vector2(0.6537844, 0.6537844)
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxFlat_g4v7s")
+text = "ON"
+
+[node name="Label3" type="Label" parent="CanvasLayer/Setting_screens/Accesibility" unique_id=1543313456]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 195.0
+offset_right = 454.0
+offset_bottom = 250.0
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 60
+text = "subtitles"
+uppercase = true
+
+[node name="Button" type="Button" parent="CanvasLayer/Setting_screens/Accesibility/Label3" unique_id=1951566455]
+layout_mode = 0
+offset_left = 632.0
+offset_right = 734.25
+offset_bottom = 81.0
+scale = Vector2(0.6537844, 0.6537844)
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxFlat_g4v7s")
+text = "ON"
+
+[node name="Label4" type="Label" parent="CanvasLayer/Setting_screens/Accesibility" unique_id=474373753]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 280.0
+offset_right = 634.0
+offset_bottom = 335.0
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 60
+text = "flashing effects"
+uppercase = true
+
+[node name="Button" type="Button" parent="CanvasLayer/Setting_screens/Accesibility/Label4" unique_id=1410901203]
+layout_mode = 0
+offset_left = 632.0
+offset_right = 734.25
+offset_bottom = 81.0
+scale = Vector2(0.6537844, 0.6537844)
+theme_override_fonts/font = ExtResource("4_gc0em")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_71mqq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxFlat_g4v7s")
+text = "ON"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_display_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="CanvasLayer/Apply" to="." method="_on_apply_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button3" to="." method="_on_gameplay_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button4" to="." method="_on_accessibility_pressed"]
+[connection signal="timeout" from="CanvasLayer/Setting_screens/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/Setting_screens/Display/Label/Button" to="CanvasLayer/Setting_screens" method="_on_fullscreen_pressed"]
+[connection signal="item_selected" from="CanvasLayer/Setting_screens/Display/Label3/OptionButton" to="CanvasLayer/Setting_screens" method="_on_windowmode_selected"]
+[connection signal="pressed" from="CanvasLayer/Setting_screens/Display/Label4/Button" to="CanvasLayer/Setting_screens" method="_on_vsync_pressed"]
+[connection signal="value_changed" from="CanvasLayer/Setting_screens/Audio/Label/HSlider" to="CanvasLayer/Setting_screens" method="_on_Mastervolume_changed"]
+[connection signal="value_changed" from="CanvasLayer/Setting_screens/Audio/Label3/HSlider" to="CanvasLayer/Setting_screens" method="_on_Musicvolume_changed"]
+[connection signal="value_changed" from="CanvasLayer/Setting_screens/Audio/Label4/HSlider" to="CanvasLayer/Setting_screens" method="_on_sfxvolume_changed"]
+[connection signal="value_changed" from="CanvasLayer/Setting_screens/Audio/Label5/HSlider" to="CanvasLayer/Setting_screens" method="_on_narratorvolume_changed"]
+[connection signal="value_changed" from="CanvasLayer/Setting_screens/Gameplay/Label/HSlider" to="CanvasLayer/Setting_screens" method="_on_mousesensitivity_changed"]
+[connection signal="value_changed" from="CanvasLayer/Setting_screens/Gameplay/Label4/HSlider" to="CanvasLayer/Setting_screens" method="_on_textspeed_changed"]
+[connection signal="pressed" from="CanvasLayer/Setting_screens/Gameplay/Label3/Button" to="CanvasLayer/Setting_screens" method="_on_showtutorial_pressed"]
+[connection signal="pressed" from="CanvasLayer/Setting_screens/Accesibility/Label/Button" to="CanvasLayer/Setting_screens" method="_on_screenshake_pressed"]
+[connection signal="pressed" from="CanvasLayer/Setting_screens/Accesibility/Label3/Button" to="CanvasLayer/Setting_screens" method="_on_subtitles_pressed"]
+[connection signal="pressed" from="CanvasLayer/Setting_screens/Accesibility/Label4/Button" to="CanvasLayer/Setting_screens" method="_on_flashingeffects_pressed"]

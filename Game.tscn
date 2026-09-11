@@ -1,0 +1,719 @@
+[gd_scene format=3 uid="uid://dtw25pop03bd0"]
+
+[ext_resource type="Script" uid="uid://ccfe6j5pldkft" path="res://game.gd" id="1_sb48q"]
+[ext_resource type="PackedScene" uid="uid://dsplk1qntsmb3" path="res://gamewindow.tscn" id="2_xkndl"]
+[ext_resource type="Texture2D" uid="uid://caw481m58w5ss" path="res://assets/background.png" id="2_y5ctq"]
+[ext_resource type="Texture2D" uid="uid://l0tesmr7le6n" path="res://assets/Downloads.png" id="3_u44n3"]
+[ext_resource type="Script" uid="uid://f5j72fhj832b" path="res://narrator.gd" id="4_joorw"]
+[ext_resource type="Texture2D" uid="uid://cxr3henjf7kyn" path="res://ui/narratorscursor.png" id="5_2vekm"]
+[ext_resource type="FontFile" uid="uid://bux8vfmgwrpw4" path="res://assets/schrift/LowresPixel-Regular.otf" id="6_3mrqo"]
+[ext_resource type="Texture2D" uid="uid://tlojmgrhivis" path="res://assets/test_Bg.jpg" id="6_elkpi"]
+[ext_resource type="Script" uid="uid://c2gutmhhucqf5" path="res://clock.gd" id="6_r0x5m"]
+[ext_resource type="Script" uid="uid://bnludctgww2wg" path="res://startscenepane.gd" id="7_0yprl"]
+[ext_resource type="Texture2D" uid="uid://cbn66kbvg6ig4" path="res://assets/fensterbar.png" id="12_0yprl"]
+[ext_resource type="Script" uid="uid://d4ihl6vxwp0oo" path="res://taskbar.gd" id="13_0yprl"]
+[ext_resource type="FontFile" uid="uid://bqkw42vmy22rk" path="res://assets/schrift/HomeVideo-Regular.otf" id="13_wuoie"]
+[ext_resource type="Texture2D" uid="uid://bcit0bybh70hs" path="res://assets/schliesenbutton.png" id="14_bvhbk"]
+[ext_resource type="Texture2D" uid="uid://cj1tfiyjihjva" path="res://assets/verkleinernbutton.png" id="15_cpsxm"]
+[ext_resource type="Texture2D" uid="uid://cjt3ch6numg4o" path="res://assets/restorebutton.png" id="16_hmewc"]
+[ext_resource type="Script" uid="uid://bkjp4s0la6la8" path="res://appmenu.gd" id="18_bvhbk"]
+[ext_resource type="Texture2D" uid="uid://cgx1mmhsunvn0" path="res://assets/appmenu.png" id="18_wuoie"]
+[ext_resource type="Script" uid="uid://y5nkvjpov4ad" path="res://mülleimer.gd" id="19_aeq37"]
+[ext_resource type="Texture2D" uid="uid://dxmb476y7x1ny" path="res://assets/white.png" id="20_8ktx7"]
+[ext_resource type="Texture2D" uid="uid://1062f2isx85f" path="res://R.png" id="20_cpsxm"]
+[ext_resource type="Texture2D" uid="uid://frbguje4qbim" path="res://assets/Schraubenzieher.png" id="20_w7ht3"]
+[ext_resource type="Texture2D" uid="uid://nkpm33oqrmis" path="res://assets/allebuttons_0007.png" id="21_7ged1"]
+[ext_resource type="Texture2D" uid="uid://d1tb1qh8gwe6t" path="res://assets/allebuttons_aus.png" id="21_hmewc"]
+[ext_resource type="Texture2D" uid="uid://o8qjb1s7tjmd" path="res://assets/allebuttons.png" id="21_y5ctq"]
+[ext_resource type="Script" uid="uid://b125rtt3pem5k" path="res://logoutbutton.gd" id="22_jsoai"]
+[ext_resource type="Texture2D" uid="uid://cc3rhcye2qx4q" path="res://assets/allebuttons_0010.png" id="23_0mevm"]
+[ext_resource type="Texture2D" uid="uid://c3ktarwkifewi" path="res://assets/allebuttons_0009.png" id="23_w2501"]
+[ext_resource type="Texture2D" uid="uid://btc7w7pchkase" path="res://assets/chipeinsetzen.png" id="23_y5ctq"]
+[ext_resource type="Script" uid="uid://bcelgp3a3yllh" path="res://shutdown_button.gd" id="24_hwsgv"]
+[ext_resource type="Script" uid="uid://pjijpgbafjcc" path="res://DragableObject.gd" id="26_bisgb"]
+[ext_resource type="Texture2D" uid="uid://clvoqlp61omjy" path="res://assets/mülleimer.png" id="31_4my3f"]
+[ext_resource type="Texture2D" uid="uid://cr08oskc4votx" path="res://assets/TitleOS.png" id="31_gebyw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ged1"]
+bg_color = Color(0.8980392, 0.5686275, 0.7372549, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mevm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.2, 0.28235295, 0.87058824, 1)
+border_width_top = 8
+border_color = Color(0.22745098, 0.37254903, 0.89411765, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(1512, 76)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkk80"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yf5fn"]
+bg_color = Color(0.8741615, 0.8741615, 0.8741613, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(25.460724, 25.460724)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57qmd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Game" type="Node2D" unique_id=1811765135]
+script = ExtResource("1_sb48q")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=240031362]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -168.0
+offset_top = -46.0
+offset_right = 1432.0
+offset_bottom = 854.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9599998, 0.9599998)
+texture = ExtResource("2_y5ctq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2111941507]
+position = Vector2(572, 323)
+
+[node name="Narrator" type="Node" parent="." unique_id=235743842 node_paths=PackedStringArray("mauszeiger")]
+script = ExtResource("4_joorw")
+mauszeiger = NodePath("CanvasLayer/Narratorscursor")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Narrator" unique_id=1248935999]
+
+[node name="Narratorscursor" type="Sprite2D" parent="Narrator/CanvasLayer" unique_id=226253772]
+z_index = 3
+texture_filter = 1
+position = Vector2(1250, 671.99994)
+scale = Vector2(5, 5)
+texture = ExtResource("5_2vekm")
+
+[node name="Narratorscursor2" type="Sprite2D" parent="Narrator/CanvasLayer" unique_id=2094605297]
+z_index = 3
+texture_filter = 1
+position = Vector2(1250, 671.99994)
+scale = Vector2(5, 5)
+texture = ExtResource("5_2vekm")
+
+[node name="Szene1" type="Node" parent="Narrator/CanvasLayer" unique_id=867810427]
+
+[node name="2140" type="Sprite2D" parent="Narrator/CanvasLayer/Szene1" unique_id=94386215]
+visible = false
+position = Vector2(668, 383)
+scale = Vector2(2.9193714, 3.0313623)
+texture = ExtResource("6_elkpi")
+
+[node name="Panel" type="Panel" parent="Narrator/CanvasLayer/Szene1" unique_id=1877460284]
+offset_left = 340.0
+offset_top = -50.0
+offset_right = 924.0
+offset_bottom = 6.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7ged1")
+script = ExtResource("7_0yprl")
+metadata/_edit_use_anchors_ = true
+
+[node name="Fensterbar" type="Sprite2D" parent="Narrator/CanvasLayer/Szene1/Panel" unique_id=54235361]
+texture_filter = 1
+position = Vector2(363.73108, 30)
+scale = Vector2(35.797775, 7.448003)
+texture = ExtResource("12_0yprl")
+
+[node name="Label" type="Label" parent="Narrator/CanvasLayer/Szene1/Panel" unique_id=1570800403]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.18321939
+anchor_top = -0.80357254
+anchor_right = -0.18321939
+anchor_bottom = -0.80357254
+offset_left = -257.99988
+offset_top = 57.00006
+offset_right = 310.00012
+offset_bottom = 98.00006
+theme_override_fonts/font = ExtResource("13_wuoie")
+theme_override_font_sizes/font_size = 32
+text = "Game.exe"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Narrator/CanvasLayer/Szene1/Panel" unique_id=1767212143]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.17637007
+anchor_top = -0.85714394
+anchor_right = -0.17637007
+anchor_bottom = -0.85714394
+offset_left = 961.0001
+offset_top = 55.00006
+offset_right = 999.0001
+offset_bottom = 93.00006
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0mevm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0mevm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0mevm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0mevm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0mevm")
+icon = ExtResource("14_bvhbk")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="Narrator/CanvasLayer/Szene1/Panel" unique_id=734240291]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.17637007
+anchor_top = -0.85714394
+anchor_right = -0.17637007
+anchor_bottom = -0.85714394
+offset_left = 874.0001
+offset_top = 55.00006
+offset_right = 912.0001
+offset_bottom = 93.00006
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0mevm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0mevm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0mevm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0mevm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0mevm")
+icon = ExtResource("15_cpsxm")
+metadata/_edit_use_anchors_ = true
+
+[node name="Restorebutton" type="Sprite2D" parent="Narrator/CanvasLayer/Szene1/Panel" unique_id=1010382361]
+texture_filter = 1
+position = Vector2(836.2689, 28)
+texture = ExtResource("16_hmewc")
+
+[node name="Control" type="Control" parent="." unique_id=363950032]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control" unique_id=1811663484]
+script = ExtResource("13_0yprl")
+
+[node name="Panel" type="Panel" parent="Control/CanvasLayer" unique_id=136551437]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -792.0
+offset_top = -67.0
+offset_right = 719.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control/CanvasLayer/Panel" unique_id=1631961460]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/CanvasLayer/Panel/StaticBody2D" unique_id=682997924]
+position = Vector2(758, 39)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Button" type="Button" parent="Control/CanvasLayer" unique_id=140901381]
+texture_filter = 1
+offset_left = 18.999998
+offset_top = 666.0
+offset_right = 55.0
+offset_bottom = 702.0
+scale = Vector2(1.2399986, 1.2399986)
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkk80")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pkk80")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pkk80")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pkk80")
+theme_override_styles/focus = SubResource("StyleBoxFlat_pkk80")
+icon = ExtResource("3_u44n3")
+
+[node name="Clock" type="Label" parent="Control/CanvasLayer" unique_id=333632975]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -117.0
+offset_top = -89.0
+offset_right = 69.0
+offset_bottom = 32.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_3mrqo")
+theme_override_font_sizes/font_size = 42
+text = "18:20"
+vertical_alignment = 1
+script = ExtResource("6_r0x5m")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1411951796]
+autoplay = true
+bus = &"Music"
+
+[node name="Window" parent="." unique_id=264861115 instance=ExtResource("2_xkndl")]
+visible = false
+position = Vector2(567, 283)
+scale = Vector2(0.59999514, 0.59999514)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2142877191 node_paths=PackedStringArray("window")]
+script = ExtResource("18_bvhbk")
+window = NodePath("../Window")
+
+[node name="Mülleimer" type="Sprite2D" parent="CanvasLayer" unique_id=2098779428]
+texture_filter = 1
+position = Vector2(1199, 614)
+rotation = -0.32361063
+scale = Vector2(6.612379, 6.612379)
+texture = ExtResource("31_4my3f")
+script = ExtResource("19_aeq37")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/Mülleimer" unique_id=262023815]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Mülleimer/Area2D" unique_id=235070363]
+polygon = PackedVector2Array(-4.0325317, -17.46315, -6.811981, -14.407608, -10.519394, -0.9760437, -10.548752, 14.805725, -8.065842, 16.914581, 4.368271, 16.937698, 6.620514, 14.502884, 6.4085236, -0.083724976, 9.326035, -0.22177124, 10.429443, -2.0848389, 10.432999, -3.9977875, 9.476517, -3.9995575, 9.391922, -9.929855, 5.0949097, -13.763748, -0.40434265, -14.013092)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1910738837]
+texture_filter = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1.9999999
+offset_top = -481.9999
+offset_right = 44.0
+offset_bottom = -428.9999
+grow_vertical = 0
+scale = Vector2(7.8400006, 7.8400006)
+texture = ExtResource("18_wuoie")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=419559274]
+offset_left = 9.0
+offset_top = 247.0
+offset_right = 69.0
+offset_bottom = 307.0
+texture = ExtResource("20_cpsxm")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect2" unique_id=447558870]
+layout_mode = 0
+offset_left = 66.0
+offset_top = -1.0
+offset_right = 168.0
+offset_bottom = 62.0
+theme_override_fonts/font = ExtResource("6_3mrqo")
+theme_override_font_sizes/font_size = 25
+text = "Admin"
+vertical_alignment = 1
+
+[node name="OpenGame" type="Button" parent="CanvasLayer" unique_id=2144551545]
+offset_left = 2.0
+offset_top = 323.0
+offset_right = 182.0
+offset_bottom = 372.0
+scale = Vector2(0.9200009, 0.9200009)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_3mrqo")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yf5fn")
+text = "Game
+The Game"
+icon = ExtResource("20_cpsxm")
+alignment = 0
+expand_icon = true
+
+[node name="OpenText" type="Button" parent="CanvasLayer" unique_id=1059703817]
+offset_left = 2.0
+offset_top = 380.0
+offset_right = 182.0
+offset_bottom = 429.0
+scale = Vector2(0.9200009, 0.9200009)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_3mrqo")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yf5fn")
+text = "Text
+Text editor"
+icon = ExtResource("20_cpsxm")
+alignment = 0
+expand_icon = true
+
+[node name="OpenMusic" type="Button" parent="CanvasLayer" unique_id=230948569]
+offset_left = 2.0
+offset_top = 437.0
+offset_right = 182.0
+offset_bottom = 486.0
+scale = Vector2(0.9200009, 0.9200009)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_3mrqo")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yf5fn")
+text = "Music
+Music player"
+icon = ExtResource("20_cpsxm")
+alignment = 0
+expand_icon = true
+
+[node name="Button6" type="Button" parent="CanvasLayer" unique_id=907360473]
+visible = false
+offset_top = 495.0
+offset_right = 180.0
+offset_bottom = 544.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_3mrqo")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yf5fn")
+text = "Game
+The Game"
+icon = ExtResource("20_cpsxm")
+alignment = 0
+expand_icon = true
+
+[node name="Button7" type="Button" parent="CanvasLayer" unique_id=200634835]
+visible = false
+offset_top = 552.0
+offset_right = 180.0
+offset_bottom = 601.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_3mrqo")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yf5fn")
+text = "Game
+The Game"
+icon = ExtResource("20_cpsxm")
+alignment = 0
+expand_icon = true
+
+[node name="OpenSettings" type="Button" parent="CanvasLayer" unique_id=1179030661]
+offset_left = 182.0
+offset_top = 323.0
+offset_right = 362.0
+offset_bottom = 372.0
+scale = Vector2(0.76, 0.76)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_3mrqo")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yf5fn")
+text = "Settings
+Open Settings"
+icon = ExtResource("20_cpsxm")
+alignment = 0
+expand_icon = true
+
+[node name="OpenDocuments" type="Button" parent="CanvasLayer" unique_id=525242575]
+offset_left = 182.0
+offset_top = 366.0
+offset_right = 362.0
+offset_bottom = 415.0
+scale = Vector2(0.76, 0.76)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_3mrqo")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yf5fn")
+text = "Documents
+Open Documents"
+icon = ExtResource("20_cpsxm")
+alignment = 0
+expand_icon = true
+
+[node name="OpenFiles" type="Button" parent="CanvasLayer" unique_id=1532436296]
+offset_left = 182.0
+offset_top = 410.0
+offset_right = 362.0
+offset_bottom = 459.0
+scale = Vector2(0.76, 0.76)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_3mrqo")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yf5fn")
+text = "Files
+File Explorer"
+icon = ExtResource("20_cpsxm")
+alignment = 0
+expand_icon = true
+
+[node name="Utility" type="Button" parent="CanvasLayer" unique_id=1699012471]
+offset_left = 182.0
+offset_top = 457.0
+offset_right = 362.0
+offset_bottom = 506.0
+scale = Vector2(0.76, 0.76)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_3mrqo")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yf5fn")
+text = "Utilities
+Utility Explorer"
+icon = ExtResource("20_8ktx7")
+alignment = 0
+expand_icon = true
+
+[node name="Schraubenzieher" type="Sprite2D" parent="CanvasLayer/Utility" unique_id=1738695814]
+texture_filter = 1
+position = Vector2(23.68422, 23.684204)
+rotation = -0.6897277
+scale = Vector2(0.9071777, 0.9071777)
+texture = ExtResource("20_w7ht3")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer/Utility" unique_id=987105756 node_paths=PackedStringArray("sprite2d") groups=["schraubenzieher"]]
+script = ExtResource("26_bisgb")
+sprite2d = NodePath("Schraubenzieher")
+
+[node name="Schraubenzieher" type="Sprite2D" parent="CanvasLayer/Utility/CharacterBody2D" unique_id=691898557]
+texture_filter = 1
+position = Vector2(23.68422, 23.684204)
+rotation = -0.6897277
+scale = Vector2(0.9071777, 0.9071777)
+texture = ExtResource("20_w7ht3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Utility/CharacterBody2D" unique_id=331954665]
+position = Vector2(6.578947, 9.210526)
+polygon = PackedVector2Array(6.578949, -5.2631836, 17.10527, 7.8947144, 17.10527, 10.526306, 18.421066, 9.21051, 21.052628, 11.842102, 19.736832, 14.473694, 28.947372, 26.315796, 31.578934, 27.631592, 32.89473, 30.263184, 30.263168, 32.894714, 27.631577, 31.57898, 26.31578, 28.947388, 19.736832, 19.736816, 17.10527, 17.105286, 14.473679, 18.421082, 11.842117, 15.78949, 13.157883, 14.473694, 11.842117, 13.157898, 10.526321, 13.157898, 0, 1.3157959, 0, -3.9473877, 2.6315765, -6.5789185)
+
+[node name="Shutdown" type="Button" parent="CanvasLayer" unique_id=72321363]
+texture_filter = 1
+offset_left = 286.0
+offset_top = 608.00006
+offset_right = 324.0
+offset_bottom = 646.00006
+scale = Vector2(0.90335166, 0.90335166)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+script = ExtResource("24_hwsgv")
+
+[node name="Label" type="Label" parent="CanvasLayer/Shutdown" unique_id=2104122408]
+texture_filter = 1
+layout_mode = 0
+offset_left = -6.6419463
+offset_top = 37.637512
+offset_right = 67.358055
+offset_bottom = 54.637512
+scale = Vector2(0.69168615, 0.69168615)
+theme_override_fonts/font = ExtResource("6_3mrqo")
+text = "Shutdown"
+
+[node name="Sprite2D" type="TextureRect" parent="CanvasLayer/Shutdown" unique_id=1136201019]
+layout_mode = 0
+offset_top = -6.1035156e-05
+offset_right = 38.0
+offset_bottom = 37.99994
+texture = ExtResource("23_y5ctq")
+
+[node name="Sprite2D3" type="TextureRect" parent="CanvasLayer/Shutdown" unique_id=282455642]
+layout_mode = 0
+offset_top = -6.1035156e-05
+offset_right = 38.0
+offset_bottom = 37.99994
+texture = ExtResource("21_hmewc")
+
+[node name="Sprite2D2" type="TextureRect" parent="CanvasLayer/Shutdown" unique_id=1419409854]
+visible = false
+layout_mode = 0
+offset_left = 2.2139778
+offset_top = 2.213892
+offset_right = 36.213978
+offset_bottom = 35.21389
+scale = Vector2(1, 1.033)
+texture = ExtResource("23_0mevm")
+
+[node name="buttons" type="Control" parent="CanvasLayer/Shutdown" unique_id=662331939]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Allebuttons" type="Sprite2D" parent="CanvasLayer/Shutdown/buttons" unique_id=897087883]
+texture_filter = 1
+position = Vector2(4.427948, 4.4278564)
+scale = Vector2(0.26844484, 0.26844484)
+texture = ExtResource("21_y5ctq")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons" unique_id=810217311]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons/Area2D" unique_id=1506928308]
+polygon = PackedVector2Array(-8.247437, -4.1237793, -8.247437, -4.1237793, -4.1237793, -8.247559, 4.123657, -8.247559, 8.247437, -4.1237793, 8.247437, 4.123535, 4.123657, 8.247314, -4.1237793, 8.247314, -8.247437, 4.123535)
+
+[node name="Allebuttons2" type="Sprite2D" parent="CanvasLayer/Shutdown/buttons" unique_id=266052566]
+texture_filter = 1
+position = Vector2(33.209656, 4.4278564)
+scale = Vector2(0.26844484, 0.26844484)
+texture = ExtResource("21_y5ctq")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons2" unique_id=2130119781]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons2/Area2D" unique_id=411082132]
+polygon = PackedVector2Array(-8.247437, -4.1237793, -8.247437, -4.1237793, -4.1237793, -8.247559, 4.123657, -8.247559, 8.247437, -4.1237793, 8.247437, 4.123535, 4.123657, 8.247314, -4.1237793, 8.247314, -8.247437, 4.123535)
+
+[node name="Allebuttons3" type="Sprite2D" parent="CanvasLayer/Shutdown/buttons" unique_id=1331691525]
+texture_filter = 1
+position = Vector2(4.3615417, 33.14319)
+scale = Vector2(0.26844484, 0.26844484)
+texture = ExtResource("21_y5ctq")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons3" unique_id=1978374403]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons3/Area2D" unique_id=499115857]
+polygon = PackedVector2Array(-8.247437, -4.1237793, -8.247437, -4.1237793, -4.1237793, -8.247559, 4.123657, -8.247559, 8.247437, -4.1237793, 8.247437, 4.123535, 4.123657, 8.247314, -4.1237793, 8.247314, -8.247437, 4.123535)
+
+[node name="Allebuttons4" type="Sprite2D" parent="CanvasLayer/Shutdown/buttons" unique_id=1633321001]
+texture_filter = 1
+position = Vector2(33.14325, 33.14319)
+scale = Vector2(0.26844484, 0.26844484)
+texture = ExtResource("21_y5ctq")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons4" unique_id=2129317147]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons4/Area2D" unique_id=1861962028]
+polygon = PackedVector2Array(-8.247437, -4.1237793, -8.247437, -4.1237793, -4.1237793, -8.247559, 4.123657, -8.247559, 8.247437, -4.1237793, 8.247437, 4.123535, 4.123657, 8.247314, -4.1237793, 8.247314, -8.247437, 4.123535)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer/Shutdown" unique_id=1521892910 groups=["chip_shutdown"]]
+layer = 100
+visible = false
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer/Shutdown/CanvasLayer" unique_id=906145939 node_paths=PackedStringArray("sprite2d")]
+position = Vector2(285, 607.00006)
+scale = Vector2(0.90335166, 0.90335166)
+script = ExtResource("26_bisgb")
+sprite2d = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Shutdown/CanvasLayer/CharacterBody2D" unique_id=51409422]
+texture_filter = 1
+position = Vector2(19.926, 19.6)
+scale = Vector2(1.6721568, 1.6721568)
+texture = ExtResource("23_w2501")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Shutdown/CanvasLayer/CharacterBody2D" unique_id=228225979]
+position = Vector2(19.372284, 19.37207)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Logout" type="Button" parent="CanvasLayer" unique_id=49324547]
+texture_filter = 1
+offset_left = 237.0
+offset_top = 608.00006
+offset_right = 275.0
+offset_bottom = 646.00006
+scale = Vector2(0.90335166, 0.90335166)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+script = ExtResource("22_jsoai")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="CanvasLayer/Logout" unique_id=1683332845 groups=["logout_kappe"]]
+layer = 100
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer/Logout/CanvasLayer2" unique_id=1547022268 node_paths=PackedStringArray("sprite2d", "appmenu")]
+position = Vector2(253.00002, 624.00006)
+scale = Vector2(0.90335166, 0.90335166)
+script = ExtResource("26_bisgb")
+sprite2d = NodePath("Sprite2D")
+appmenu = NodePath("../../..")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Logout/CanvasLayer2/CharacterBody2D" unique_id=1846796030]
+texture_filter = 1
+position = Vector2(1.2881851, 1.2881527)
+texture = ExtResource("21_7ged1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Logout/CanvasLayer2/CharacterBody2D" unique_id=1937084118]
+polygon = PackedVector2Array(-17.711823, -15.497925, -17.711823, 17.711792, -15.497864, 19.92572, 17.711792, 19.92572, 19.925781, 17.711792, 19.925781, -15.497925, 17.711792, -17.711853, -15.497864, -17.711853)
+
+[node name="Label" type="Label" parent="CanvasLayer/Logout" unique_id=1226355006]
+texture_filter = 1
+layout_mode = 0
+offset_left = -5.534941
+offset_top = 37.637512
+offset_right = 68.46506
+offset_bottom = 54.637512
+scale = Vector2(0.69168615, 0.69168615)
+theme_override_fonts/font = ExtResource("6_3mrqo")
+text = "Log off"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="TextureRect" parent="CanvasLayer/Logout" unique_id=869150021]
+layout_mode = 0
+offset_top = -8.392334e-05
+offset_right = 38.0
+offset_bottom = 37.999916
+texture = ExtResource("23_y5ctq")
+
+[node name="Sprite2D3" type="TextureRect" parent="CanvasLayer/Logout" unique_id=1112600115]
+visible = false
+layout_mode = 0
+offset_left = 5.2
+offset_top = 5.535
+offset_right = 20.2
+offset_bottom = 20.535
+scale = Vector2(1.6985049, 1.6985049)
+texture = ExtResource("23_w2501")
+
+[node name="Sprite2D2" type="TextureRect" parent="CanvasLayer/Logout" unique_id=975470411]
+layout_mode = 0
+offset_left = 2.2139778
+offset_top = 2.213892
+offset_right = 36.213978
+offset_bottom = 35.21389
+scale = Vector2(1, 1.033)
+texture = ExtResource("23_0mevm")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Logout" unique_id=442760178]
+visible = false
+layout_mode = 0
+offset_top = -6.1035156e-05
+offset_right = 40.0
+offset_bottom = 39.99994
+scale = Vector2(0.9557205, 0.9557205)
+texture = ExtResource("21_7ged1")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/Logout" unique_id=1774984592]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Logout/Area2D" unique_id=1019750293]
+position = Vector2(19.372284, 19.37207)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Button11" type="Button" parent="CanvasLayer" unique_id=1095656910]
+texture_filter = 1
+offset_left = 284.0
+offset_top = 243.0
+offset_right = 322.0
+offset_bottom = 281.0
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57qmd")
+icon = ExtResource("14_bvhbk")
+
+[node name="TitleOs" type="Sprite2D" parent="CanvasLayer" unique_id=551805747]
+visible = false
+texture_filter = 1
+position = Vector2(498, 450)
+texture = ExtResource("31_gebyw")
+
+[connection signal="mouse_entered" from="Narrator/CanvasLayer/Szene1/Panel" to="Narrator/CanvasLayer/Szene1/Panel" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Narrator/CanvasLayer/Szene1/Panel" to="Narrator/CanvasLayer/Szene1/Panel" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/CanvasLayer/Button" to="Control/CanvasLayer" method="_on_button_pressed"]
+[connection signal="body_entered" from="CanvasLayer/Mülleimer/Area2D" to="CanvasLayer/Mülleimer" method="_on_area_2d_body_entered"]
+[connection signal="pressed" from="CanvasLayer/OpenGame" to="CanvasLayer" method="_on_open_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/OpenText" to="CanvasLayer" method="_on_open_text_pressed"]
+[connection signal="pressed" from="CanvasLayer/OpenMusic" to="CanvasLayer" method="_on_open_music_pressed"]
+[connection signal="pressed" from="CanvasLayer/OpenSettings" to="CanvasLayer" method="_on_open_settings_pressed"]
+[connection signal="pressed" from="CanvasLayer/OpenDocuments" to="CanvasLayer" method="_on_open_documents_pressed"]
+[connection signal="pressed" from="CanvasLayer/OpenFiles" to="CanvasLayer" method="_on_open_files_pressed"]
+[connection signal="pressed" from="CanvasLayer/Shutdown" to="CanvasLayer" method="_on_shutdown_pressed"]
+[connection signal="body_entered" from="CanvasLayer/Shutdown/buttons/Allebuttons/Area2D" to="CanvasLayer/Shutdown" method="_on_area_schraube1_entered"]
+[connection signal="body_entered" from="CanvasLayer/Shutdown/buttons/Allebuttons2/Area2D" to="CanvasLayer/Shutdown" method="_on_area_schraube2_entered"]
+[connection signal="body_entered" from="CanvasLayer/Shutdown/buttons/Allebuttons3/Area2D" to="CanvasLayer/Shutdown" method="_on_area_schraube3_entered"]
+[connection signal="body_entered" from="CanvasLayer/Shutdown/buttons/Allebuttons4/Area2D" to="CanvasLayer/Shutdown" method="_on_area_schraube4_entered"]
+[connection signal="area_entered" from="CanvasLayer/Logout/Area2D" to="CanvasLayer/Logout" method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="CanvasLayer/Logout/Area2D" to="CanvasLayer/Logout" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="CanvasLayer/Logout/Area2D" to="CanvasLayer/Logout" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="CanvasLayer/Button11" to="CanvasLayer" method="_on_button_11_pressed"]

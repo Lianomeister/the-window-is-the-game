@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bu032aw4alodm"]
+
+[ext_resource type="Script" uid="uid://b7h1f0nl23k5b" path="res://viewer.gd" id="1_hf8cj"]
+[ext_resource type="Texture2D" uid="uid://bcit0bybh70hs" path="res://assets/schliesenbutton.png" id="1_tfsf5"]
+
+[node name="Viewer" type="Node2D" unique_id=229727140]
+script = ExtResource("1_hf8cj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=912680993]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=502535361]
+offset_left = 178.00002
+offset_top = -3.999998
+offset_right = 931.44836
+offset_bottom = 620.13806
+scale = Vector2(1.16, 1.16)
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1184357208]
+visible = false
+offset_left = 233.0
+offset_top = 21.0
+offset_right = 987.0
+offset_bottom = 693.0
+texture = ExtResource("1_tfsf5")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer" unique_id=1369934244]
+offset_left = 225.0
+offset_top = 19.0
+offset_right = 1001.0
+offset_bottom = 703.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1683388496]
+position = Vector2(623, 344)
+zoom = Vector2(1.5, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=1290136601]
+wait_time = 3.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

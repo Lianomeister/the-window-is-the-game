@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://71mt0u6cb6se"]
+
+[ext_resource type="Script" uid="uid://c86h3tf16diwy" path="res://musicplayer.gd" id="1_v741v"]
+[ext_resource type="Texture2D" uid="uid://dsu6ulwdpykyo" path="res://assets/bluemusicbuttons_0001.png" id="2_1oht4"]
+[ext_resource type="Texture2D" uid="uid://ch87kibj4i86b" path="res://assets/bluemusicbuttons_0002.png" id="3_faeva"]
+[ext_resource type="Texture2D" uid="uid://blsvl2kwpo6u8" path="res://assets/bluemusicbuttons_0003.png" id="4_6v3ls"]
+[ext_resource type="Texture2D" uid="uid://cgvcbi4oek50g" path="res://assets/oldfunk-repaired-9ccca9.png" id="5_v741v"]
+[ext_resource type="Texture2D" uid="uid://nnbvdwv4ux3e" path="res://assets/oldschoolboom (1).png" id="6_q6qfe"]
+[ext_resource type="Texture2D" uid="uid://r34dl0foafk5" path="res://assets/oldschoolboom-repaired-a0f142.png" id="7_oiian"]
+[ext_resource type="AudioStream" uid="uid://6kl4a7ajy0nv" path="res://assets/music/oldschool.mp3" id="8_q6qfe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v741v"]
+bg_color = Color(0.03573212, 0.036684033, 0.2499829, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.46329194, 0.5682258, 0.99091, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yf5fn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_57qmd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d0u6y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3gngh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yf5fn"]
+bg_color = Color(0.43728375, 0.50344616, 0.9789718, 1)
+
+[node name="Node2D" type="Node2D" unique_id=911468289 node_paths=PackedStringArray("audiostreamplayer", "Sprite1", "Sprite2", "Sprite3")]
+script = ExtResource("1_v741v")
+audiostreamplayer = NodePath("Panel/AudioStreamPlayer")
+Sprite1 = NodePath("Panel/Oldfunk")
+Sprite2 = NodePath("Panel/Oldschool")
+Sprite3 = NodePath("Panel/Oldschoolboom")
+
+[node name="Panel" type="Panel" parent="." unique_id=1515243362]
+offset_right = 329.0
+offset_bottom = 396.0
+scale = Vector2(1.36, 1.36)
+theme_override_styles/panel = SubResource("StyleBoxFlat_v741v")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="Panel" unique_id=1658299260]
+position = Vector2(-3.5061552e-07, 0)
+scale = Vector2(0.73529404, 0.73529404)
+
+[node name="play" type="Button" parent="Panel" unique_id=53643832]
+texture_filter = 1
+layout_mode = 0
+offset_left = 228.0
+offset_top = 285.00003
+offset_right = 263.0
+offset_bottom = 320.00003
+scale = Vector2(2.4400048, 2.4400048)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yf5fn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_d0u6y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3gngh")
+icon = ExtResource("2_1oht4")
+
+[node name="stop" type="Button" parent="Panel" unique_id=1815307964]
+texture_filter = 1
+layout_mode = 0
+offset_left = 16.0
+offset_top = 284.0
+offset_right = 51.0
+offset_bottom = 319.0
+scale = Vector2(2.4400048, 2.4400048)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yf5fn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_d0u6y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3gngh")
+icon = ExtResource("3_faeva")
+
+[node name="pause" type="Button" parent="Panel" unique_id=944282011]
+texture_filter = 1
+layout_mode = 0
+offset_left = 119.00011
+offset_top = 291.0
+offset_right = 154.0001
+offset_bottom = 326.0
+scale = Vector2(2.600005, 2.600005)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yf5fn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_d0u6y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3gngh")
+icon = ExtResource("4_6v3ls")
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel" unique_id=1394740577]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 251.0
+offset_right = 302.0
+offset_bottom = 272.0
+theme_override_styles/background = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/fill = SubResource("StyleBoxFlat_yf5fn")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Panel" unique_id=780430366]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 229.0
+offset_right = 121.0
+offset_bottom = 252.0
+text = "15:20 / 20:00"
+
+[node name="Oldfunk" type="Sprite2D" parent="Panel" unique_id=2009832541]
+position = Vector2(165.32309, 112.91179)
+scale = Vector2(1.439995, 1.439995)
+texture = ExtResource("5_v741v")
+
+[node name="Oldschool" type="Sprite2D" parent="Panel" unique_id=1408481510]
+position = Vector2(168.32303, 116.91177)
+texture = ExtResource("6_q6qfe")
+
+[node name="Oldschoolboom" type="Sprite2D" parent="Panel" unique_id=655769624]
+position = Vector2(168.32303, 117.91177)
+texture = ExtResource("7_oiian")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Panel" unique_id=890473511]
+stream = ExtResource("8_q6qfe")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="Panel/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Panel/stop" to="." method="_on_stop_pressed"]
+[connection signal="pressed" from="Panel/pause" to="." method="_on_pause_pressed"]

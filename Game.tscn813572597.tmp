@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://dtw25pop03bd0"]
+
+[ext_resource type="Script" uid="uid://ccfe6j5pldkft" path="res://game.gd" id="1_sb48q"]
+[ext_resource type="Texture2D" uid="uid://eswa33xf0dmx" path="res://assets/Backgroundv1.jpg" id="1_wbfu4"]
+[ext_resource type="PackedScene" uid="uid://dsplk1qntsmb3" path="res://gamewindow.tscn" id="2_xkndl"]
+[ext_resource type="Texture2D" uid="uid://l0tesmr7le6n" path="res://assets/Downloads.png" id="3_u44n3"]
+[ext_resource type="Script" uid="uid://f5j72fhj832b" path="res://narrator.gd" id="4_joorw"]
+[ext_resource type="Texture2D" uid="uid://by27ujum36yfl" path="res://assets/fenstericon.png" id="5_t88pq"]
+[ext_resource type="FontFile" uid="uid://bux8vfmgwrpw4" path="res://assets/schrift/LowresPixel-Regular.otf" id="6_3mrqo"]
+[ext_resource type="Script" uid="uid://c2gutmhhucqf5" path="res://clock.gd" id="6_r0x5m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.2, 0.28235295, 0.87058824, 1)
+border_width_top = 8
+border_color = Color(0.22745098, 0.37254903, 0.89411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkk80"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+
+[node name="Game" type="Node2D" unique_id=1811765135]
+script = ExtResource("1_sb48q")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=240031362]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = -129.0
+offset_right = 1380.0
+offset_bottom = 771.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wbfu4")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2111941507]
+position = Vector2(572, 323)
+
+[node name="Window" parent="." unique_id=264861115 instance=ExtResource("2_xkndl")]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(263, 222)
+scale = Vector2(0.6, 0.6)
+
+[node name="Narrator" type="Node" parent="." unique_id=235743842]
+script = ExtResource("4_joorw")
+
+[node name="Control" type="Control" parent="." unique_id=363950032]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control" unique_id=1811663484]
+
+[node name="Panel" type="Panel" parent="Control/CanvasLayer" unique_id=136551437]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -792.0
+offset_top = -67.0
+offset_right = 719.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+
+[node name="Button" type="Button" parent="Control/CanvasLayer" unique_id=140901381]
+texture_filter = 1
+offset_left = 18.999998
+offset_top = 666.0
+offset_right = 55.0
+offset_bottom = 702.0
+scale = Vector2(1.2399986, 1.2399986)
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkk80")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pkk80")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pkk80")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pkk80")
+theme_override_styles/focus = SubResource("StyleBoxFlat_pkk80")
+icon = ExtResource("3_u44n3")
+
+[node name="Button2" type="Button" parent="Control/CanvasLayer" unique_id=161792756]
+texture_filter = 1
+offset_left = 82.0
+offset_top = 667.0
+offset_right = 124.0
+offset_bottom = 709.0
+scale = Vector2(1.0230002, 1.0230002)
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkk80")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pkk80")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pkk80")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pkk80")
+theme_override_styles/focus = SubResource("StyleBoxFlat_pkk80")
+icon = ExtResource("5_t88pq")
+
+[node name="Panel" type="Panel" parent="Control/CanvasLayer/Button2" unique_id=1376647800]
+layout_mode = 0
+offset_left = 4.5454416
+offset_top = 43.939262
+offset_right = 37.184387
+offset_bottom = 45.328148
+
+[node name="Clock" type="Label" parent="Control/CanvasLayer" unique_id=333632975]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -117.0
+offset_top = -89.0
+offset_right = 69.0
+offset_bottom = 32.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_3mrqo")
+theme_override_font_sizes/font_size = 42
+text = "18:20"
+vertical_alignment = 1
+script = ExtResource("6_r0x5m")
+
+[connection signal="pressed" from="Control/CanvasLayer/Button2" to="." method="_on_window_button_taskbar_pressed"]

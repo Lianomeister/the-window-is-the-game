@@ -1,0 +1,600 @@
+[gd_scene format=3 uid="uid://dsplk1qntsmb3"]
+
+[ext_resource type="Texture2D" uid="uid://dujvpnur1qobj" path="res://assets/unbenannt.png" id="1_ualgq"]
+[ext_resource type="Script" uid="uid://dyirpcwdgk3pb" path="res://gamewindow.gd" id="1_ursss"]
+[ext_resource type="Script" uid="uid://c3jv6naqpov8u" path="res://gamewindowbar.gd" id="4_7x4tm"]
+[ext_resource type="Texture2D" uid="uid://vshx28kh2sog" path="res://assets/dungeon.png" id="4_deat6"]
+[ext_resource type="FontFile" uid="uid://bqkw42vmy22rk" path="res://assets/schrift/HomeVideo-Regular.otf" id="6_nddfm"]
+[ext_resource type="Texture2D" uid="uid://bcit0bybh70hs" path="res://assets/schliesenbutton.png" id="7_c6wk5"]
+[ext_resource type="Script" uid="uid://3tvtddjlnknp" path="res://schlussel.gd" id="7_rsuat"]
+[ext_resource type="Texture2D" uid="uid://4d8d5n5bd1up" path="res://assets/schlüssel.png" id="8_deat6"]
+[ext_resource type="Texture2D" uid="uid://cj1tfiyjihjva" path="res://assets/verkleinernbutton.png" id="8_pkk80"]
+[ext_resource type="Script" uid="uid://pownts30woko" path="res://ULTRAREFRESHSTATICBODY.gd" id="8_rsuat"]
+[ext_resource type="PackedScene" uid="uid://b1a7n30rpltqg" path="res://fileexplorer.tscn" id="9_1bjx6"]
+[ext_resource type="Script" uid="uid://c0cd08nsopers" path="res://key_logout_layer.gd" id="9_deat6"]
+[ext_resource type="PackedScene" uid="uid://csynknmtkgkod" path="res://settings.tscn" id="10_rnlsx"]
+[ext_resource type="PackedScene" uid="uid://dcuxba5l2ohsx" path="res://text_editor.tscn" id="11_1hg6l"]
+[ext_resource type="PackedScene" uid="uid://71mt0u6cb6se" path="res://musicplayer.tscn" id="11_acjd8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.8980392, 0.5686275, 0.7372549, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57qmd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqfw8"]
+size = Vector2(25.000015, 445.6897)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hg6l"]
+size = Vector2(501.7241, 20.689716)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_acjd8"]
+size = Vector2(15.517212, 444.8275)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ugm5"]
+size = Vector2(9.866823, 14.823113)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(1004, 10.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(15, 637.5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yf5fn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(628, 11.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
+size = Vector2(15.5, 657)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gngh"]
+size = Vector2(460, 10.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcnqv"]
+size = Vector2(16, 614)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rnlsx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7numd"]
+size = Vector2(1344.7246, 4.444435)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsuat"]
+size = Vector2(15.277893, 808.61237)
+
+[node name="Window" type="Node2D" unique_id=264861115]
+position = Vector2(548, 319)
+script = ExtResource("1_ursss")
+
+[node name="Game" type="Panel" parent="." unique_id=1029350891]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -279.0
+offset_top = -290.0
+offset_right = 305.0
+offset_bottom = -234.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+script = ExtResource("4_7x4tm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Game" unique_id=2032682882]
+texture_filter = 1
+position = Vector2(291.8, 291.8)
+scale = Vector2(9.4, 9.4)
+texture = ExtResource("1_ualgq")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Game" unique_id=229741719]
+texture_filter = 1
+position = Vector2(296.49997, 315.49997)
+scale = Vector2(17.34375, 15.593751)
+texture = ExtResource("4_deat6")
+
+[node name="Label" type="Label" parent="Game" unique_id=1275609331]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 13.0
+offset_right = 578.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("6_nddfm")
+theme_override_font_sizes/font_size = 32
+text = "Unknown Window"
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Game" unique_id=666345636]
+texture_filter = 1
+layout_mode = 0
+offset_left = 535.0
+offset_top = 13.0
+offset_right = 573.0
+offset_bottom = 51.0
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57qmd")
+icon = ExtResource("7_c6wk5")
+
+[node name="Button2" type="Button" parent="Game" unique_id=701293848]
+texture_filter = 1
+layout_mode = 0
+offset_left = 480.0
+offset_top = 13.0
+offset_right = 518.0
+offset_bottom = 51.0
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57qmd")
+icon = ExtResource("8_pkk80")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Game" unique_id=1806236220]
+script = ExtResource("8_rsuat")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Game/StaticBody2D" unique_id=1318790184]
+position = Vector2(9.5, 315.5)
+scale = Vector2(1.16, 1.16)
+shape = SubResource("RectangleShape2D_sqfw8")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Game" unique_id=678902543]
+script = ExtResource("8_rsuat")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/StaticBody2D2" unique_id=1616531390]
+position = Vector2(295, 59)
+scale = Vector2(1.16, 1.16)
+shape = SubResource("RectangleShape2D_1hg6l")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Game" unique_id=125020731]
+script = ExtResource("8_rsuat")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Game/StaticBody2D3" unique_id=1738091957]
+position = Vector2(291, 573.99994)
+scale = Vector2(1.1600001, 1.1600001)
+shape = SubResource("RectangleShape2D_1hg6l")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Game" unique_id=228199742]
+script = ExtResource("8_rsuat")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Game/StaticBody2D4" unique_id=472852029]
+position = Vector2(579, 315)
+scale = Vector2(1.1600001, 1.1600001)
+shape = SubResource("RectangleShape2D_acjd8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Game" unique_id=63009746]
+layer = 500
+script = ExtResource("9_deat6")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Game/CanvasLayer" unique_id=697826682 groups=["key_logout"]]
+z_index = 5
+texture_filter = 1
+position = Vector2(566, 367.99997)
+scale = Vector2(1.825031, 1.8222162)
+motion_mode = 1
+safe_margin = 15.0
+script = ExtResource("7_rsuat")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Game/CanvasLayer/CharacterBody2D" unique_id=1017336608]
+rect = Rect2(-4.6762695, -7.014389, 9.172668, 14.028778)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/CanvasLayer/CharacterBody2D" unique_id=582683682]
+texture = ExtResource("8_deat6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/CanvasLayer/CharacterBody2D" unique_id=1922431103]
+position = Vector2(1.1444092e-05, 4.7683716e-07)
+shape = SubResource("RectangleShape2D_2ugm5")
+
+[node name="Files" type="Panel" parent="." unique_id=547450669]
+visible = false
+offset_left = -428.0
+offset_top = -293.0
+offset_right = 448.0
+offset_bottom = -225.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g4v7s")
+script = ExtResource("4_7x4tm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Files" unique_id=1453231283]
+texture_filter = 1
+position = Vector2(501, 333.00003)
+scale = Vector2(16.199999, 10.759999)
+texture = ExtResource("1_ualgq")
+
+[node name="Label" type="Label" parent="Files" unique_id=562924885]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 15.0
+offset_right = 628.0
+offset_bottom = 60.99997
+theme_override_fonts/font = ExtResource("6_nddfm")
+theme_override_font_sizes/font_size = 50
+text = "File explorer"
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Files" unique_id=691120930]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 71.0
+offset_right = 991.0
+offset_bottom = 647.0
+
+[node name="SubViewport" type="SubViewport" parent="Files/SubViewportContainer" unique_id=1425295183]
+handle_input_locally = false
+size = Vector2i(960, 575)
+render_target_update_mode = 0
+
+[node name="Fileexplorer" parent="Files/SubViewportContainer/SubViewport" unique_id=1108423317 instance=ExtResource("9_1bjx6")]
+scale = Vector2(0.40000093, 0.40000093)
+
+[node name="Button" type="Button" parent="Files" unique_id=1095173301]
+texture_filter = 1
+layout_mode = 0
+offset_left = 943.99994
+offset_top = 7.0
+offset_right = 981.99994
+offset_bottom = 45.0
+scale = Vector2(1.3, 1.3)
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57qmd")
+icon = ExtResource("7_c6wk5")
+
+[node name="Button2" type="Button" parent="Files" unique_id=1491788825]
+texture_filter = 1
+layout_mode = 0
+offset_left = 883.0
+offset_top = 7.0
+offset_right = 921.0
+offset_bottom = 45.0
+scale = Vector2(1.3, 1.3)
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57qmd")
+icon = ExtResource("8_pkk80")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Files" unique_id=1642568336]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Files/StaticBody2D" unique_id=57202949]
+position = Vector2(499, 4.75)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Files" unique_id=1438658073]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Files/StaticBody2D2" unique_id=300733963]
+position = Vector2(502, 652)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Files" unique_id=1734280063]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Files/StaticBody2D3" unique_id=693900214]
+position = Vector2(7, 326.75)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Files" unique_id=2091710426]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Files/StaticBody2D4" unique_id=1276224894]
+position = Vector2(996, 327)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Text" type="Panel" parent="." unique_id=1730837111]
+visible = false
+offset_left = -262.0
+offset_top = -311.0
+offset_right = 365.0
+offset_bottom = -243.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yf5fn")
+script = ExtResource("4_7x4tm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Text" unique_id=565349222]
+texture_filter = 1
+position = Vector2(315, 345.5)
+scale = Vector2(10.091406, 11.171875)
+texture = ExtResource("1_ualgq")
+
+[node name="Label" type="Label" parent="Text" unique_id=751247063]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 20.0
+offset_right = 630.0
+offset_bottom = 65.99997
+scale = Vector2(0.84000003, 0.84000003)
+theme_override_fonts/font = ExtResource("6_nddfm")
+theme_override_font_sizes/font_size = 50
+text = "Text editor"
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Text" unique_id=1152025361]
+layout_mode = 0
+offset_left = 23.00003
+offset_top = 75.00003
+offset_right = 535.0
+offset_bottom = 587.0
+scale = Vector2(1.16, 1.16)
+
+[node name="SubViewport" type="SubViewport" parent="Text/SubViewportContainer" unique_id=2014010812]
+disable_3d = true
+handle_input_locally = false
+render_target_update_mode = 0
+
+[node name="Text Editor" parent="Text/SubViewportContainer/SubViewport" unique_id=865681796 instance=ExtResource("11_1hg6l")]
+
+[node name="Button" type="Button" parent="Text" unique_id=8763998]
+texture_filter = 1
+layout_mode = 0
+offset_left = 566.99994
+offset_top = 9.0
+offset_right = 604.99994
+offset_bottom = 47.0
+scale = Vector2(1.3, 1.3)
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57qmd")
+icon = ExtResource("7_c6wk5")
+
+[node name="Button2" type="Button" parent="Text" unique_id=1930112320]
+texture_filter = 1
+layout_mode = 0
+offset_left = 506.0
+offset_top = 9.0
+offset_right = 544.0
+offset_bottom = 47.0
+scale = Vector2(1.3, 1.3)
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57qmd")
+icon = ExtResource("8_pkk80")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Text" unique_id=779486770]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text/StaticBody2D" unique_id=1975905970]
+position = Vector2(315, 4.25)
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Text" unique_id=1304982574]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Text/StaticBody2D2" unique_id=270674653]
+position = Vector2(316, 675)
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Text" unique_id=1704679588]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text/StaticBody2D3" unique_id=570354186]
+position = Vector2(11.5, 339.5)
+shape = SubResource("RectangleShape2D_d0u6y")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Text" unique_id=1988544091]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text/StaticBody2D4" unique_id=1184854679]
+position = Vector2(622, 339)
+shape = SubResource("RectangleShape2D_d0u6y")
+
+[node name="Music" type="Panel" parent="." unique_id=758313569]
+process_mode = 4
+visible = false
+offset_left = -262.0
+offset_top = -311.0
+offset_right = 213.0
+offset_bottom = -218.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yf5fn")
+script = ExtResource("4_7x4tm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Music" unique_id=2129378512]
+texture_filter = 1
+position = Vector2(241.49997, 339.5)
+scale = Vector2(7.546876, 10.140626)
+texture = ExtResource("1_ualgq")
+
+[node name="Label" type="Label" parent="Music" unique_id=249495198]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 41.0
+offset_right = 625.0
+offset_bottom = 86.99997
+scale = Vector2(0.76, 0.76)
+theme_override_fonts/font = ExtResource("6_nddfm")
+theme_override_font_sizes/font_size = 50
+text = "Music player"
+
+[node name="Button" type="Button" parent="Music" unique_id=1014101377]
+texture_filter = 1
+layout_mode = 0
+offset_left = 415.99994
+offset_top = 32.0
+offset_right = 453.99994
+offset_bottom = 70.0
+scale = Vector2(1.3, 1.3)
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57qmd")
+icon = ExtResource("7_c6wk5")
+
+[node name="Button2" type="Button" parent="Music" unique_id=574614695]
+texture_filter = 1
+layout_mode = 0
+offset_left = 355.0
+offset_top = 32.0
+offset_right = 393.0
+offset_bottom = 70.0
+scale = Vector2(1.3, 1.3)
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57qmd")
+icon = ExtResource("8_pkk80")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Music" unique_id=103615430]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 96.0
+offset_right = 619.0
+offset_bottom = 646.0
+
+[node name="SubViewport" type="SubViewport" parent="Music/SubViewportContainer" unique_id=649755868]
+handle_input_locally = false
+size = Vector2i(447, 538)
+render_target_update_mode = 0
+
+[node name="Node2D" parent="Music/SubViewportContainer/SubViewport" unique_id=911468289 instance=ExtResource("11_acjd8")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Music" unique_id=937972521]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Music/StaticBody2D" unique_id=1852972311]
+position = Vector2(245, 30.75)
+shape = SubResource("RectangleShape2D_3gngh")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Music" unique_id=778150981]
+position = Vector2(0, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Music/StaticBody2D2" unique_id=718510382]
+position = Vector2(243, 97)
+shape = SubResource("RectangleShape2D_3gngh")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Music" unique_id=292296063]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Music/StaticBody2D3" unique_id=2124577695]
+position = Vector2(18, 334)
+shape = SubResource("RectangleShape2D_fcnqv")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Music" unique_id=55007000]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Music/StaticBody2D4" unique_id=2103552402]
+position = Vector2(468, 334)
+shape = SubResource("RectangleShape2D_fcnqv")
+
+[node name="Settings" type="Panel" parent="." unique_id=2020089255]
+visible = false
+offset_left = -426.0
+offset_top = -316.0
+offset_right = 919.0
+offset_bottom = -235.0
+scale = Vector2(0.7199988, 0.7199988)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rnlsx")
+script = ExtResource("4_7x4tm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Settings" unique_id=1890317779]
+texture_filter = 1
+position = Vector2(673, 408)
+scale = Vector2(21.6875, 13.15625)
+texture = ExtResource("1_ualgq")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Settings" unique_id=417503217]
+layout_mode = 0
+offset_left = 43.99997
+offset_top = 91.00003
+offset_right = 1324.0
+offset_bottom = 791.0
+
+[node name="SubViewport" type="SubViewport" parent="Settings/SubViewportContainer" unique_id=1763041483]
+handle_input_locally = false
+size = Vector2i(1280, 700)
+render_target_update_mode = 0
+
+[node name="Settings" parent="Settings/SubViewportContainer/SubViewport" unique_id=45953351 instance=ExtResource("10_rnlsx")]
+position = Vector2(11, 14)
+
+[node name="Label" type="Label" parent="Settings" unique_id=1755791676]
+layout_mode = 0
+offset_left = 15.277813
+offset_top = 12.500021
+offset_right = 626.27783
+offset_bottom = 72.50002
+scale = Vector2(0.84000003, 0.84000003)
+theme_override_fonts/font = ExtResource("6_nddfm")
+theme_override_font_sizes/font_size = 66
+text = "Settings"
+
+[node name="Button" type="Button" parent="Settings" unique_id=1340419980]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1271.3333
+offset_top = 7.2777615
+offset_right = 1309.3333
+offset_bottom = 45.277763
+scale = Vector2(1.6889166, 1.6889166)
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57qmd")
+icon = ExtResource("7_c6wk5")
+
+[node name="Button2" type="Button" parent="Settings" unique_id=1023368455]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1193.0576
+offset_top = 6.944456
+offset_right = 1231.0576
+offset_bottom = 44.944458
+scale = Vector2(1.6889166, 1.6889166)
+theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_57qmd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57qmd")
+icon = ExtResource("8_pkk80")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Settings" unique_id=14849462]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Settings/StaticBody2D" unique_id=603618104]
+position = Vector2(672.08453, 3.3333478)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_7numd")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Settings" unique_id=279909493]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Settings/StaticBody2D2" unique_id=1050826679]
+position = Vector2(676.3901, 801.39026)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_7numd")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Settings" unique_id=623786063]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Settings/StaticBody2D3" unique_id=1753915283]
+position = Vector2(1339.5857, 407.08405)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_rsuat")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Settings" unique_id=849955155]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Settings/StaticBody2D4" unique_id=1716459171]
+position = Vector2(8.333496, 406.94516)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_rsuat")
+
+[connection signal="mouse_entered" from="Game" to="Game" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Game" to="Game" method="_on_mouse_exited"]
+[connection signal="pressed" from="Game/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Game/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Files/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Files/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Text/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Text/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Music/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Music/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Settings/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Settings/Button2" to="." method="_on_button_2_pressed"]

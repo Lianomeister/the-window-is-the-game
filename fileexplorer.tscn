@@ -1,0 +1,2903 @@
+[gd_scene format=3 uid="uid://b1a7n30rpltqg"]
+
+[ext_resource type="Script" uid="uid://br467uhs41bed" path="res://fileexplorer.gd" id="1_essfr"]
+[ext_resource type="Texture2D" uid="uid://bhd7mtcqinbxm" path="res://assets/folder.png" id="1_m70d4"]
+[ext_resource type="FontFile" uid="uid://bqkw42vmy22rk" path="res://assets/schrift/HomeVideo-Regular.otf" id="2_1hd87"]
+[ext_resource type="Texture2D" uid="uid://cbp23ay2f6omu" path="res://assets/txtfile.png" id="3_to2iu"]
+[ext_resource type="Texture2D" uid="uid://dkcxverfgxtps" path="res://assets/pngfile.png" id="4_i7vdd"]
+[ext_resource type="Texture2D" uid="uid://b5fgvl4t1khcy" path="res://assets/thatthingmusic.png" id="6_cf68y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.5384443, 0.52610075, 0.29589882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_essfr"]
+bg_color = Color(0.41903564, 0.40905657, 0.21655384, 1)
+
+[node name="Fileexplorer" type="Node2D" unique_id=1108423317]
+script = ExtResource("1_essfr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=618561859]
+layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=363028325]
+z_index = -3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.78039217, 0.76862746, 0.5176471, 1)
+
+[node name="Site1" type="Control" parent="CanvasLayer" unique_id=282614000]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 56.0
+offset_right = 40.0
+offset_bottom = 96.0
+scale = Vector2(0.720001, 0.720001)
+
+[node name="Button" type="Button" parent="CanvasLayer/Site1" unique_id=1068237058]
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.059273
+offset_right = 67.0
+offset_bottom = 64.05927
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site1/Button" unique_id=45896799]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "Documents"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="CanvasLayer/Site1" unique_id=533348090]
+texture_filter = 1
+layout_mode = 0
+offset_left = 297.58386
+offset_top = 50.0
+offset_right = 314.58386
+offset_bottom = 64.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site1/Button2" unique_id=1357620895]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "Pictures"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" type="Button" parent="CanvasLayer/Site1" unique_id=1745238770]
+texture_filter = 1
+layout_mode = 0
+offset_left = 538.58386
+offset_top = 50.0
+offset_right = 555.58386
+offset_bottom = 64.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site1/Button3" unique_id=765706824]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 36
+text = "Trash"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="Button" parent="CanvasLayer/Site1" unique_id=619884411]
+texture_filter = 1
+layout_mode = 0
+offset_left = 794.58386
+offset_top = 50.0
+offset_right = 811.58386
+offset_bottom = 64.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Site1/Button4" unique_id=566214912]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 36
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button5" type="Button" parent="CanvasLayer/Site1" unique_id=136990079]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1035.5839
+offset_top = 50.0
+offset_right = 1052.5839
+offset_bottom = 64.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site1/Button5" unique_id=1002223563]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button6" type="Button" parent="CanvasLayer/Site1" unique_id=1468997020]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.0
+offset_top = 263.05927
+offset_right = 67.0
+offset_bottom = 277.05927
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site1/Button6" unique_id=1649460892]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button7" type="Button" parent="CanvasLayer/Site1" unique_id=1760828610]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 297.58386
+offset_top = 263.0
+offset_right = 314.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site1/Button7" unique_id=1651933743]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button8" type="Button" parent="CanvasLayer/Site1" unique_id=1772959865]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 538.58386
+offset_top = 263.0
+offset_right = 555.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site1/Button8" unique_id=691419496]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button9" type="Button" parent="CanvasLayer/Site1" unique_id=1806043863]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 794.58386
+offset_top = 263.0
+offset_right = 811.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site1/Button9" unique_id=1772227051]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button10" type="Button" parent="CanvasLayer/Site1" unique_id=839412814]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1035.5839
+offset_top = 263.0
+offset_right = 1052.5839
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site1/Button10" unique_id=725623381]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button11" type="Button" parent="CanvasLayer/Site1" unique_id=795321064]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.0
+offset_top = 488.05927
+offset_right = 67.0
+offset_bottom = 502.05927
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site1/Button11" unique_id=2038917705]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button12" type="Button" parent="CanvasLayer/Site1" unique_id=1880921862]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 297.58386
+offset_top = 488.0
+offset_right = 314.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site1/Button12" unique_id=1129676919]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button13" type="Button" parent="CanvasLayer/Site1" unique_id=463043770]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 538.58386
+offset_top = 488.0
+offset_right = 555.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site1/Button13" unique_id=832235430]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button14" type="Button" parent="CanvasLayer/Site1" unique_id=1033563262]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 794.58386
+offset_top = 488.0
+offset_right = 811.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site1/Button14" unique_id=1057060649]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button15" type="Button" parent="CanvasLayer/Site1" unique_id=210738421]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1035.5839
+offset_top = 488.0
+offset_right = 1052.5839
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site1/Button15" unique_id=958835847]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Site2" type="Control" parent="CanvasLayer" unique_id=1765096425]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.9999995
+offset_top = 56.000004
+offset_right = 45.0
+offset_bottom = 96.0
+scale = Vector2(0.6799997, 0.6799997)
+
+[node name="Button16" type="Button" parent="CanvasLayer/Site2" unique_id=1189378026]
+texture_filter = 1
+layout_mode = 0
+offset_left = 319.0
+offset_top = 44.0
+offset_right = 348.0
+offset_bottom = 78.0
+scale = Vector2(4.5999985, 4.5999985)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("3_to2iu")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button16" unique_id=786646413]
+layout_mode = 0
+offset_left = -5.434785
+offset_top = 33.043488
+offset_right = 204.56522
+offset_bottom = 84.83617
+scale = Vector2(0.20227432, 0.20227432)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "Readme.txt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button17" type="Button" parent="CanvasLayer/Site2" unique_id=140660863]
+texture_filter = 1
+layout_mode = 0
+offset_left = 557.0
+offset_top = 43.999996
+offset_right = 586.0
+offset_bottom = 78.0
+scale = Vector2(4.5999985, 4.5999985)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("3_to2iu")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button17" unique_id=78997991]
+layout_mode = 0
+offset_left = -5.434785
+offset_top = 33.043488
+offset_right = 204.56522
+offset_bottom = 84.83617
+scale = Vector2(0.20227432, 0.20227432)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "Notes.txt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button18" type="Button" parent="CanvasLayer/Site2" unique_id=256851372]
+texture_filter = 1
+layout_mode = 0
+offset_left = 814.70624
+offset_top = 44.11766
+offset_right = 843.70624
+offset_bottom = 78.11766
+scale = Vector2(4.5999985, 4.5999985)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("3_to2iu")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button18" unique_id=1160691047]
+layout_mode = 0
+offset_left = -11.304352
+offset_top = 33.04349
+offset_right = 240.69565
+offset_bottom = 84.83617
+scale = Vector2(0.20227432, 0.20227432)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "GameInfo.txt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button19" type="Button" parent="CanvasLayer/Site2" unique_id=42485234]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1054.7062
+offset_top = 44.117657
+offset_right = 1083.7062
+offset_bottom = 78.11766
+scale = Vector2(4.5999985, 4.5999985)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("3_to2iu")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button19" unique_id=277992881]
+layout_mode = 0
+offset_left = -5.434785
+offset_top = 33.043488
+offset_right = 204.56522
+offset_bottom = 84.83617
+scale = Vector2(0.20227432, 0.20227432)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "TODO.txt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button6" type="Button" parent="CanvasLayer/Site2" unique_id=344985977]
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.0
+offset_top = 53.0
+offset_right = 67.0
+offset_bottom = 67.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button6" unique_id=606676822]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Old"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button20" type="Button" parent="CanvasLayer/Site2" unique_id=462267310]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.0
+offset_top = 263.0
+offset_right = 67.0
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button20" unique_id=1978745363]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button7" type="Button" parent="CanvasLayer/Site2" unique_id=126891106]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 297.58386
+offset_top = 263.0
+offset_right = 314.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button7" unique_id=349007456]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button8" type="Button" parent="CanvasLayer/Site2" unique_id=1786396423]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 538.58386
+offset_top = 263.0
+offset_right = 555.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button8" unique_id=1887361829]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button9" type="Button" parent="CanvasLayer/Site2" unique_id=1118571481]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 794.58386
+offset_top = 263.0
+offset_right = 811.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button9" unique_id=1209255965]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button10" type="Button" parent="CanvasLayer/Site2" unique_id=1752661869]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1035.5839
+offset_top = 263.0
+offset_right = 1052.5839
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button10" unique_id=452827502]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button11" type="Button" parent="CanvasLayer/Site2" unique_id=1088381134]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.0
+offset_top = 488.05927
+offset_right = 67.0
+offset_bottom = 502.05927
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button11" unique_id=1702213301]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button12" type="Button" parent="CanvasLayer/Site2" unique_id=216381457]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 297.58386
+offset_top = 488.0
+offset_right = 314.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button12" unique_id=1412350639]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button13" type="Button" parent="CanvasLayer/Site2" unique_id=1370007787]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 538.58386
+offset_top = 488.0
+offset_right = 555.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button13" unique_id=2008312794]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button14" type="Button" parent="CanvasLayer/Site2" unique_id=2128861917]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 794.58386
+offset_top = 488.0
+offset_right = 811.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button14" unique_id=1440032171]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button15" type="Button" parent="CanvasLayer/Site2" unique_id=2070694961]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1035.5839
+offset_top = 488.0
+offset_right = 1052.5839
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site2/Button15" unique_id=909714498]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Site3" type="Control" parent="CanvasLayer" unique_id=1769026995]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 22.999998
+offset_top = 209.0
+offset_right = 62.999992
+offset_bottom = 249.0
+scale = Vector2(0.79999876, 0.79999876)
+
+[node name="Button2" type="Button" parent="CanvasLayer/Site3" unique_id=363513040]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 255.80539
+offset_top = -144.69707
+offset_right = 272.8054
+offset_bottom = -130.69707
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button2" unique_id=382267210]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "Documents"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" type="Button" parent="CanvasLayer/Site3" unique_id=341749061]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 496.38925
+offset_top = -144.69708
+offset_right = 513.3893
+offset_bottom = -130.69708
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button3" unique_id=1917837781]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="Button" parent="CanvasLayer/Site3" unique_id=1528182361]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 752.3893
+offset_top = -144.69708
+offset_right = 769.3893
+offset_bottom = -130.69708
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button4" unique_id=1916970718]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button5" type="Button" parent="CanvasLayer/Site3" unique_id=817963997]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 993.3893
+offset_top = -144.69708
+offset_right = 1010.3893
+offset_bottom = -130.69708
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button5" unique_id=551017750]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button6" type="Button" parent="CanvasLayer/Site3" unique_id=414374085]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 7.8053894
+offset_top = 68.36218
+offset_right = 24.80539
+offset_bottom = 82.36218
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button6" unique_id=449316879]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button7" type="Button" parent="CanvasLayer/Site3" unique_id=710605154]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 255.38925
+offset_top = 68.30292
+offset_right = 272.38925
+offset_bottom = 82.30292
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button7" unique_id=2073542568]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button8" type="Button" parent="CanvasLayer/Site3" unique_id=1474662410]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 496.38925
+offset_top = 68.30292
+offset_right = 513.3893
+offset_bottom = 82.30292
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button8" unique_id=629061808]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button9" type="Button" parent="CanvasLayer/Site3" unique_id=944447145]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 752.3893
+offset_top = 68.30292
+offset_right = 769.3893
+offset_bottom = 82.30292
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button9" unique_id=312607337]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button10" type="Button" parent="CanvasLayer/Site3" unique_id=58553685]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 993.3893
+offset_top = 68.30292
+offset_right = 1010.3893
+offset_bottom = 82.30292
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button10" unique_id=151239390]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button11" type="Button" parent="CanvasLayer/Site3" unique_id=1164709205]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 7.8053894
+offset_top = 293.36218
+offset_right = 24.80539
+offset_bottom = 307.36218
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button11" unique_id=1544063693]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button12" type="Button" parent="CanvasLayer/Site3" unique_id=1853792036]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 255.38925
+offset_top = 293.30292
+offset_right = 272.38925
+offset_bottom = 307.30292
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button12" unique_id=65145462]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button13" type="Button" parent="CanvasLayer/Site3" unique_id=203532982]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 496.38925
+offset_top = 293.30292
+offset_right = 513.3893
+offset_bottom = 307.30292
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button13" unique_id=973859737]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button14" type="Button" parent="CanvasLayer/Site3" unique_id=1315892475]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 752.3893
+offset_top = 293.30292
+offset_right = 769.3893
+offset_bottom = 307.30292
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button14" unique_id=339340593]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button15" type="Button" parent="CanvasLayer/Site3" unique_id=1880314253]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 993.3893
+offset_top = 293.30292
+offset_right = 1010.3893
+offset_bottom = 307.30292
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button15" unique_id=1792357734]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button16" type="Button" parent="CanvasLayer/Site3" unique_id=1613036262]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.805382
+offset_top = -154.69708
+offset_right = 53.80538
+offset_bottom = -120.69708
+scale = Vector2(4.5999985, 4.5999985)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("3_to2iu")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site3/Button16" unique_id=13836245]
+layout_mode = 0
+offset_left = -5.434785
+offset_top = 33.043488
+offset_right = 204.56522
+offset_bottom = 84.83617
+scale = Vector2(0.16749144, 0.16749144)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "Oldnotes.txt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Site4" type="Control" parent="CanvasLayer" unique_id=37724133]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -2.0
+offset_top = 50.0
+offset_right = 38.0
+offset_bottom = 90.0
+scale = Vector2(0.7199993, 0.7199993)
+
+[node name="Button" type="Button" parent="CanvasLayer/Site4" unique_id=938618221]
+texture_filter = 1
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 106.0
+offset_bottom = 77.0
+scale = Vector2(4.519999, 4.519999)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("4_i7vdd")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button" unique_id=645142430]
+layout_mode = 0
+offset_left = -6.637169
+offset_top = 34.95576
+offset_right = 224.36282
+offset_bottom = 86.74844
+scale = Vector2(0.19527167, 0.19527167)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "desktop.png"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button16" type="Button" parent="CanvasLayer/Site4" unique_id=1078555661]
+texture_filter = 1
+layout_mode = 0
+offset_left = 323.0
+offset_top = 43.0
+offset_right = 352.0
+offset_bottom = 77.0
+scale = Vector2(4.519999, 4.519999)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("4_i7vdd")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button16" unique_id=495377917]
+layout_mode = 0
+offset_left = -6.637169
+offset_top = 34.95576
+offset_right = 224.36282
+offset_bottom = 86.74844
+scale = Vector2(0.19527167, 0.19527167)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "room.png"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button17" type="Button" parent="CanvasLayer/Site4" unique_id=470300008]
+texture_filter = 1
+layout_mode = 0
+offset_left = 555.0
+offset_top = 43.0
+offset_right = 584.0
+offset_bottom = 77.0
+scale = Vector2(4.519999, 4.519999)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("4_i7vdd")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button17" unique_id=335509425]
+layout_mode = 0
+offset_left = -6.637169
+offset_top = 34.95576
+offset_right = 224.36282
+offset_bottom = 86.74844
+scale = Vector2(0.19527167, 0.19527167)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "vacation.png"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="Button" parent="CanvasLayer/Site4" unique_id=1199384727]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 794.58386
+offset_top = 50.0
+offset_right = 811.58386
+offset_bottom = 64.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button4" unique_id=939603230]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button5" type="Button" parent="CanvasLayer/Site4" unique_id=1434852409]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1035.5839
+offset_top = 50.0
+offset_right = 1052.5839
+offset_bottom = 64.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button5" unique_id=2105711308]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button6" type="Button" parent="CanvasLayer/Site4" unique_id=2055341]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.0
+offset_top = 263.05927
+offset_right = 67.0
+offset_bottom = 277.05927
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button6" unique_id=1936927390]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button7" type="Button" parent="CanvasLayer/Site4" unique_id=1984802426]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 297.58386
+offset_top = 263.0
+offset_right = 314.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button7" unique_id=1645953448]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button8" type="Button" parent="CanvasLayer/Site4" unique_id=543794015]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 538.58386
+offset_top = 263.0
+offset_right = 555.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button8" unique_id=413594646]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button9" type="Button" parent="CanvasLayer/Site4" unique_id=1127590964]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 794.58386
+offset_top = 263.0
+offset_right = 811.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button9" unique_id=447308367]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button10" type="Button" parent="CanvasLayer/Site4" unique_id=1581238078]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1035.5839
+offset_top = 263.0
+offset_right = 1052.5839
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button10" unique_id=1255744762]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button11" type="Button" parent="CanvasLayer/Site4" unique_id=1378783901]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.0
+offset_top = 488.05927
+offset_right = 67.0
+offset_bottom = 502.05927
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button11" unique_id=551117516]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button12" type="Button" parent="CanvasLayer/Site4" unique_id=111928900]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 297.58386
+offset_top = 488.0
+offset_right = 314.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button12" unique_id=1559581257]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button13" type="Button" parent="CanvasLayer/Site4" unique_id=474383417]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 538.58386
+offset_top = 488.0
+offset_right = 555.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button13" unique_id=1781382511]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button14" type="Button" parent="CanvasLayer/Site4" unique_id=1192358148]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 794.58386
+offset_top = 488.0
+offset_right = 811.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button14" unique_id=2028762132]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button15" type="Button" parent="CanvasLayer/Site4" unique_id=1792310547]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1035.5839
+offset_top = 488.0
+offset_right = 1052.5839
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site4/Button15" unique_id=1235290531]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Site5" type="Control" parent="CanvasLayer" unique_id=1888831890]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -6.0
+offset_top = 33.0
+offset_right = 34.0
+offset_bottom = 73.0
+scale = Vector2(0.79003906, 0.79003906)
+
+[node name="Button17" type="Button" parent="CanvasLayer/Site5" unique_id=1571344362]
+texture_filter = 1
+layout_mode = 0
+offset_left = 72.0
+offset_top = 55.0
+offset_right = 101.0
+offset_bottom = 89.0
+scale = Vector2(4.5999985, 4.5999985)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("3_to2iu")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button17" unique_id=479720479]
+layout_mode = 0
+offset_left = -5.434785
+offset_top = 33.043488
+offset_right = 204.56522
+offset_bottom = 84.83617
+scale = Vector2(0.20227432, 0.20227432)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 30
+text = "Nothing.txt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Site5" unique_id=866306175]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.059273
+offset_right = 67.0
+offset_bottom = 64.05927
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button" unique_id=108782527]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "Documents"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="CanvasLayer/Site5" unique_id=122973241]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 297.58386
+offset_top = 50.0
+offset_right = 314.58386
+offset_bottom = 64.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button2" unique_id=306135926]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "Pictures"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" type="Button" parent="CanvasLayer/Site5" unique_id=1573184174]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 538.58386
+offset_top = 50.0
+offset_right = 555.58386
+offset_bottom = 64.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button3" unique_id=1774010633]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 36
+text = "Trash"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="Button" parent="CanvasLayer/Site5" unique_id=1744411654]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 794.58386
+offset_top = 50.0
+offset_right = 811.58386
+offset_bottom = 64.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button4" unique_id=2039679075]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button5" type="Button" parent="CanvasLayer/Site5" unique_id=691097961]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1035.5839
+offset_top = 50.0
+offset_right = 1052.5839
+offset_bottom = 64.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button5" unique_id=1824202878]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button6" type="Button" parent="CanvasLayer/Site5" unique_id=1574811017]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.0
+offset_top = 263.05927
+offset_right = 67.0
+offset_bottom = 277.05927
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button6" unique_id=1028271286]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button7" type="Button" parent="CanvasLayer/Site5" unique_id=1088792277]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 297.58386
+offset_top = 263.0
+offset_right = 314.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button7" unique_id=2043546219]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button8" type="Button" parent="CanvasLayer/Site5" unique_id=1815463023]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 538.58386
+offset_top = 263.0
+offset_right = 555.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button8" unique_id=888463074]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button9" type="Button" parent="CanvasLayer/Site5" unique_id=243558397]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 794.58386
+offset_top = 263.0
+offset_right = 811.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button9" unique_id=108022147]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button10" type="Button" parent="CanvasLayer/Site5" unique_id=1980571596]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1035.5839
+offset_top = 263.0
+offset_right = 1052.5839
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button10" unique_id=1348180441]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button11" type="Button" parent="CanvasLayer/Site5" unique_id=86295982]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.0
+offset_top = 488.05927
+offset_right = 67.0
+offset_bottom = 502.05927
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button11" unique_id=137947725]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button12" type="Button" parent="CanvasLayer/Site5" unique_id=970154730]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 297.58386
+offset_top = 488.0
+offset_right = 314.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button12" unique_id=1834374611]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button13" type="Button" parent="CanvasLayer/Site5" unique_id=1972996451]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 538.58386
+offset_top = 488.0
+offset_right = 555.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button13" unique_id=2117567044]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button14" type="Button" parent="CanvasLayer/Site5" unique_id=1056161383]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 794.58386
+offset_top = 488.0
+offset_right = 811.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button14" unique_id=140064449]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button15" type="Button" parent="CanvasLayer/Site5" unique_id=1723425419]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1035.5839
+offset_top = 488.0
+offset_right = 1052.5839
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button15" unique_id=903146809]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button16" type="Button" parent="CanvasLayer/Site5" unique_id=18587075]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 255.80539
+offset_top = -144.69707
+offset_right = 272.8054
+offset_bottom = -130.69707
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site5/Button16" unique_id=1924818220]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "Documents"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Site6" type="Control" parent="CanvasLayer" unique_id=44462015]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -2.0
+offset_top = 50.0
+offset_right = 38.0
+offset_bottom = 90.0
+scale = Vector2(0.7199993, 0.7199993)
+
+[node name="Button" type="Button" parent="CanvasLayer/Site6" unique_id=1565323259]
+texture_filter = 1
+layout_mode = 0
+offset_left = 61.111168
+offset_top = 40.27782
+offset_right = 97.111176
+offset_bottom = 73.27782
+scale = Vector2(4.519999, 4.519999)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("6_cf68y")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button" unique_id=1821208929]
+layout_mode = 0
+offset_left = -4.3018723
+offset_top = 35.02954
+offset_right = 226.69812
+offset_bottom = 86.82222
+scale = Vector2(0.19527167, 0.19527167)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "Oldfunk.mp3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" type="Button" parent="CanvasLayer/Site6" unique_id=400104497]
+texture_filter = 1
+layout_mode = 0
+offset_left = 311.1114
+offset_top = 40.27782
+offset_right = 347.1114
+offset_bottom = 73.27782
+scale = Vector2(4.519999, 4.519999)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("6_cf68y")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button3" unique_id=274722756]
+layout_mode = 0
+offset_left = -7.374639
+offset_top = 35.02954
+offset_right = 265.62537
+offset_bottom = 86.82222
+scale = Vector2(0.19527167, 0.19527167)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "Oldschool.mp3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button16" type="Button" parent="CanvasLayer/Site6" unique_id=382821360]
+texture_filter = 1
+layout_mode = 0
+offset_left = 619.44507
+offset_top = 40.27782
+offset_right = 655.44507
+offset_bottom = 73.27782
+scale = Vector2(4.519999, 4.519999)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("6_cf68y")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button16" unique_id=2029916980]
+layout_mode = 0
+offset_left = -15.056528
+offset_top = 35.02954
+offset_right = 341.94348
+offset_bottom = 86.82222
+scale = Vector2(0.19527167, 0.19527167)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 35
+text = "Oldschoolboom.mp3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="Button" parent="CanvasLayer/Site6" unique_id=957281109]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 794.58386
+offset_top = 50.0
+offset_right = 811.58386
+offset_bottom = 64.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button4" unique_id=1718842917]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button5" type="Button" parent="CanvasLayer/Site6" unique_id=224318405]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1035.5839
+offset_top = 50.0
+offset_right = 1052.5839
+offset_bottom = 64.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button5" unique_id=1124298838]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button6" type="Button" parent="CanvasLayer/Site6" unique_id=291221121]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.0
+offset_top = 263.05927
+offset_right = 67.0
+offset_bottom = 277.05927
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button6" unique_id=2000786173]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button7" type="Button" parent="CanvasLayer/Site6" unique_id=1519842880]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 297.58386
+offset_top = 263.0
+offset_right = 314.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button7" unique_id=963870862]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button8" type="Button" parent="CanvasLayer/Site6" unique_id=2107589257]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 538.58386
+offset_top = 263.0
+offset_right = 555.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button8" unique_id=725340919]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button9" type="Button" parent="CanvasLayer/Site6" unique_id=1211616067]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 794.58386
+offset_top = 263.0
+offset_right = 811.58386
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button9" unique_id=2134636224]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button10" type="Button" parent="CanvasLayer/Site6" unique_id=114516816]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1035.5839
+offset_top = 263.0
+offset_right = 1052.5839
+offset_bottom = 277.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button10" unique_id=277996160]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button11" type="Button" parent="CanvasLayer/Site6" unique_id=1443943001]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.0
+offset_top = 488.05927
+offset_right = 67.0
+offset_bottom = 502.05927
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button11" unique_id=412011697]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button12" type="Button" parent="CanvasLayer/Site6" unique_id=620915641]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 297.58386
+offset_top = 488.0
+offset_right = 314.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button12" unique_id=1106140337]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button13" type="Button" parent="CanvasLayer/Site6" unique_id=1010133385]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 538.58386
+offset_top = 488.0
+offset_right = 555.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button13" unique_id=1451388353]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button14" type="Button" parent="CanvasLayer/Site6" unique_id=355532713]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 794.58386
+offset_top = 488.0
+offset_right = 811.58386
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button14" unique_id=999652072]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button15" type="Button" parent="CanvasLayer/Site6" unique_id=62097779]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1035.5839
+offset_top = 488.0
+offset_right = 1052.5839
+offset_bottom = 502.0
+scale = Vector2(10.24, 10.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
+icon = ExtResource("1_m70d4")
+
+[node name="Label" type="Label" parent="CanvasLayer/Site6/Button15" unique_id=1504412439]
+layout_mode = 0
+offset_left = -0.76224476
+offset_top = 14.032918
+offset_right = 188.23776
+offset_bottom = 65.8256
+scale = Vector2(0.097926855, 0.097926855)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1hd87")
+theme_override_font_sizes/font_size = 45
+text = "Anderes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=763909791]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1247.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0.043137256, 0.7254902)
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer" unique_id=100787726]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1247.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0.043137256, 0.7254902)
+
+[node name="ColorRect4" type="ColorRect" parent="CanvasLayer" unique_id=1718988143]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_bottom = -682.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0.043137256, 0.7254902)
+
+[node name="ColorRect5" type="ColorRect" parent="CanvasLayer" unique_id=1284565158]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 685.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0.043137256, 0.7254902)
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=655055005]
+offset_right = 114.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_essfr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_essfr")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_essfr")
+theme_override_styles/focus = SubResource("StyleBoxFlat_essfr")
+text = "BACK"
+
+[connection signal="pressed" from="CanvasLayer/Site1/Button" to="." method="_on_documents_pressed"]
+[connection signal="pressed" from="CanvasLayer/Site1/Button2" to="." method="_on_pictures_pressed"]
+[connection signal="pressed" from="CanvasLayer/Site1/Button3" to="." method="_on_trash_pressed"]
+[connection signal="pressed" from="CanvasLayer/Site1/Button4" to="." method="_on_music_pressed"]
+[connection signal="pressed" from="CanvasLayer/Site2/Button16" to="." method="_on_button_16_pressed"]
+[connection signal="pressed" from="CanvasLayer/Site2/Button17" to="." method="_on_button_17_pressed"]
+[connection signal="pressed" from="CanvasLayer/Site2/Button18" to="." method="_on_button_18_pressed"]
+[connection signal="pressed" from="CanvasLayer/Site2/Button19" to="." method="_on_button_19_pressed"]
+[connection signal="pressed" from="CanvasLayer/Site2/Button6" to="." method="_on_oldfolder_pressed"]
+[connection signal="pressed" from="CanvasLayer/Site3/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Site5/Button17" to="." method="_on_button_17_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Site6/Button" to="." method="_on_oldfunkbutton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Site6/Button3" to="." method="_on_oldschoolbutton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Site6/Button16" to="." method="_on_oldschoolboombutton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_back_pressed"]
