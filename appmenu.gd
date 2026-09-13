@@ -33,10 +33,10 @@ func _ready():
 			break
 
 	if tex:
-		$TextureRect2.texture = tex
+		$Node/TextureRect2.texture = tex
 	else:
 		print("Kein echtes Profilbild gefunden – Fallback verwenden.")
-		$TextureRect2.texture = load("res://R.png")
+		$Node/TextureRect2.texture = load("res://R.png")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -44,7 +44,7 @@ func _process(delta: float) -> void:
 
 
 func _on_button_11_pressed() -> void:
-	$".".hide()
+	$Node.einfahren()
 
 
 func _on_open_game_pressed() -> void:
@@ -121,7 +121,7 @@ func _on_shutdown_pressed() -> void:
 	get_tree().quit()
 
 func show_müll():
-	$"Mülleimer".show()
+	$"Mülleimer".showmüll()
 
 func hide_müll():
-	$"Mülleimer".hide()
+	$"Mülleimer".hidemüll()

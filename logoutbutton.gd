@@ -19,7 +19,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("key_logout"):
 		body.queue_free()
 		$TextureRect.hide()
-		$Sprite2D3.queue_free()
+		$Sprite2D3.hide()
 		$CanvasLayer2.show()
 		logoutbuttonstage = 1
 

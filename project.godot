@@ -55,6 +55,10 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/vsync/vsync_mode=0
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/cheatsheet_viewer/plugin.cfg")
+
 [input]
 
 left_mouse_button={

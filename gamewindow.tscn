@@ -69,6 +69,7 @@ position = Vector2(548, 319)
 script = ExtResource("1_ursss")
 
 [node name="Game" type="Panel" parent="." unique_id=1029350891]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -485,7 +486,6 @@ position = Vector2(468, 334)
 shape = SubResource("RectangleShape2D_fcnqv")
 
 [node name="Settings" type="Panel" parent="." unique_id=2020089255]
-visible = false
 offset_left = -426.0
 offset_top = -316.0
 offset_right = 919.0
@@ -510,7 +510,7 @@ offset_bottom = 791.0
 [node name="SubViewport" type="SubViewport" parent="Settings/SubViewportContainer" unique_id=1763041483]
 handle_input_locally = false
 size = Vector2i(1280, 700)
-render_target_update_mode = 0
+render_target_update_mode = 4
 
 [node name="Settings" parent="Settings/SubViewportContainer/SubViewport" unique_id=45953351 instance=ExtResource("10_rnlsx")]
 position = Vector2(11, 14)

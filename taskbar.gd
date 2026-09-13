@@ -12,4 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	$"../../CanvasLayer".show()
+	if not $"../../CanvasLayer/Node".visible:
+		$"../../CanvasLayer/Node".ausfahren()
+	else:
+		$"../../CanvasLayer/Node".einfahren()

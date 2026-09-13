@@ -18,12 +18,13 @@ var start_stage = false
 
 
 func _ready() -> void:
-	mauszeiger.position = pos1
 	if start_stage == true:
+		mauszeiger.position = pos1
 		action_start_stage()
 		$"CanvasLayer/Szene1/2140".show()
 		$CanvasLayer/Szene1/Panel.show()
 		$"../Control/CanvasLayer".hide()
+		mauszeiger.show()
 	else:
 		$"CanvasLayer/Szene1/2140".hide()
 		$CanvasLayer/Szene1/Panel.hide()
@@ -57,3 +58,10 @@ func action_start_stage():
 	tween.tween_callback(func():
 		print("now, try out a bit yourself!")
 	)
+
+func fesgemacht_stage():
+	var tween = create_tween()
+	tween.set_loops(5)
+
+	tween.tween_property(self, "position:x", self.position.x + 15, 0.2)
+	tween.tween_property(self, "position:x", self.position.x - 15, 0.2)

@@ -25,14 +25,17 @@
 [ext_resource type="Texture2D" uid="uid://nkpm33oqrmis" path="res://assets/allebuttons_0007.png" id="21_7ged1"]
 [ext_resource type="Texture2D" uid="uid://d1tb1qh8gwe6t" path="res://assets/allebuttons_aus.png" id="21_hmewc"]
 [ext_resource type="Texture2D" uid="uid://o8qjb1s7tjmd" path="res://assets/allebuttons.png" id="21_y5ctq"]
+[ext_resource type="Script" uid="uid://ocdydk78c7fp" path="res://appmenucontroller.gd" id="22_5he1h"]
 [ext_resource type="Script" uid="uid://b125rtt3pem5k" path="res://logoutbutton.gd" id="22_jsoai"]
 [ext_resource type="Texture2D" uid="uid://cc3rhcye2qx4q" path="res://assets/allebuttons_0010.png" id="23_0mevm"]
 [ext_resource type="Texture2D" uid="uid://c3ktarwkifewi" path="res://assets/allebuttons_0009.png" id="23_w2501"]
 [ext_resource type="Texture2D" uid="uid://btc7w7pchkase" path="res://assets/chipeinsetzen.png" id="23_y5ctq"]
 [ext_resource type="Script" uid="uid://bcelgp3a3yllh" path="res://shutdown_button.gd" id="24_hwsgv"]
 [ext_resource type="Script" uid="uid://pjijpgbafjcc" path="res://DragableObject.gd" id="26_bisgb"]
+[ext_resource type="Script" uid="uid://c8e8mhqg21ytg" path="res://dragable_schraube.gd" id="29_suycs"]
 [ext_resource type="Texture2D" uid="uid://clvoqlp61omjy" path="res://assets/mülleimer.png" id="31_4my3f"]
 [ext_resource type="Texture2D" uid="uid://cr08oskc4votx" path="res://assets/TitleOS.png" id="31_gebyw"]
+[ext_resource type="Shader" uid="uid://ba30gneex0etq" path="res://addons/godot_retro/shaders/standard/tv.gdshader" id="35_202ut"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ged1"]
 bg_color = Color(0.8980392, 0.5686275, 0.7372549, 0)
@@ -57,11 +60,24 @@ bg_color = Color(0.8741615, 0.8741615, 0.8741613, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 3.320984
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 size = Vector2(25.460724, 25.460724)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57qmd"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5he1h"]
+shader = ExtResource("35_202ut")
+shader_parameter/vertJerkOpt = 0.2
+shader_parameter/vertMovementOpt = 0.0
+shader_parameter/bottomStaticOpt = 0.0
+shader_parameter/bottomStaticStrenth = 0.2000000095
+shader_parameter/scalinesOpt = 0.10000000475
+shader_parameter/rgbOffsetOpt = 0.2
+shader_parameter/horzFuzzOpt = 0.15
 
 [node name="Game" type="Node2D" unique_id=1811765135]
 script = ExtResource("1_sb48q")
@@ -85,23 +101,69 @@ position = Vector2(572, 323)
 
 [node name="Narrator" type="Node" parent="." unique_id=235743842 node_paths=PackedStringArray("mauszeiger")]
 script = ExtResource("4_joorw")
-mauszeiger = NodePath("CanvasLayer/Narratorscursor")
+mauszeiger = NodePath("CanvasLayer/CharacterBody2D/Narratorscursor")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Narrator" unique_id=1248935999]
 
-[node name="Narratorscursor" type="Sprite2D" parent="Narrator/CanvasLayer" unique_id=226253772]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Narrator/CanvasLayer" unique_id=1480119327 node_paths=PackedStringArray("sprite2d")]
+position = Vector2(-42, -91)
+script = ExtResource("26_bisgb")
+sprite2d = NodePath("Narratorscursor")
+
+[node name="Narratorscursor" type="Sprite2D" parent="Narrator/CanvasLayer/CharacterBody2D" unique_id=226253772]
 z_index = 3
 texture_filter = 1
 position = Vector2(1250, 671.99994)
 scale = Vector2(5, 5)
 texture = ExtResource("5_2vekm")
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Narrator/CanvasLayer/CharacterBody2D" unique_id=688325208]
+polygon = PackedVector2Array(1216, 619, 1215, 724, 1241, 707, 1248, 724, 1265, 723, 1270, 716, 1270, 697, 1287, 696, 1286, 680, 1225, 617)
+
+[node name="Area2D" type="Area2D" parent="Narrator/CanvasLayer/CharacterBody2D" unique_id=1732957753]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Narrator/CanvasLayer/CharacterBody2D/Area2D" unique_id=1257748695]
+polygon = PackedVector2Array(1216, 619, 1215, 724, 1241, 707, 1248, 724, 1265, 723, 1270, 716, 1270, 697, 1287, 696, 1286, 680, 1225, 617)
+
 [node name="Narratorscursor2" type="Sprite2D" parent="Narrator/CanvasLayer" unique_id=2094605297]
+visible = false
 z_index = 3
 texture_filter = 1
 position = Vector2(1250, 671.99994)
 scale = Vector2(5, 5)
 texture = ExtResource("5_2vekm")
+
+[node name="Schraube1" type="Sprite2D" parent="Narrator/CanvasLayer" unique_id=1398891660]
+visible = false
+z_index = 5
+texture_filter = 1
+position = Vector2(1185, 548)
+scale = Vector2(0.6222243, 0.6222243)
+texture = ExtResource("21_y5ctq")
+
+[node name="Schraube2" type="Sprite2D" parent="Narrator/CanvasLayer" unique_id=723083978]
+visible = false
+z_index = 5
+texture_filter = 1
+position = Vector2(1185, 611)
+scale = Vector2(0.6222243, 0.6222243)
+texture = ExtResource("21_y5ctq")
+
+[node name="Schraube3" type="Sprite2D" parent="Narrator/CanvasLayer" unique_id=5237422]
+visible = false
+z_index = 5
+texture_filter = 1
+position = Vector2(1232, 590)
+scale = Vector2(0.6222243, 0.6222243)
+texture = ExtResource("21_y5ctq")
+
+[node name="Schraube4" type="Sprite2D" parent="Narrator/CanvasLayer" unique_id=669460321]
+visible = false
+z_index = 5
+texture_filter = 1
+position = Vector2(1219, 617)
+scale = Vector2(0.6222243, 0.6222243)
+texture = ExtResource("21_y5ctq")
 
 [node name="Szene1" type="Node" parent="Narrator/CanvasLayer" unique_id=867810427]
 
@@ -202,6 +264,7 @@ offset_bottom = 40.0
 script = ExtResource("13_0yprl")
 
 [node name="Panel" type="Panel" parent="Control/CanvasLayer" unique_id=136551437]
+z_index = 70
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -222,8 +285,9 @@ position = Vector2(758, 39)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Button" type="Button" parent="Control/CanvasLayer" unique_id=140901381]
+z_index = 72
 texture_filter = 1
-offset_left = 18.999998
+offset_left = 19.0
 offset_top = 666.0
 offset_right = 55.0
 offset_bottom = 702.0
@@ -236,6 +300,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_pkk80")
 icon = ExtResource("3_u44n3")
 
 [node name="Clock" type="Label" parent="Control/CanvasLayer" unique_id=333632975]
+z_index = 72
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -268,39 +333,45 @@ window = NodePath("../Window")
 
 [node name="Mülleimer" type="Sprite2D" parent="CanvasLayer" unique_id=2098779428]
 texture_filter = 1
-position = Vector2(1199, 614)
-rotation = -0.32361063
-scale = Vector2(6.612379, 6.612379)
+position = Vector2(1432, 587.00006)
+rotation = -0.3236106
+scale = Vector2(6.6123796, 6.6123796)
 texture = ExtResource("31_4my3f")
 script = ExtResource("19_aeq37")
 
 [node name="Area2D" type="Area2D" parent="CanvasLayer/Mülleimer" unique_id=262023815]
+position = Vector2(2.9352036e-06, -8.751317e-06)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Mülleimer/Area2D" unique_id=235070363]
 polygon = PackedVector2Array(-4.0325317, -17.46315, -6.811981, -14.407608, -10.519394, -0.9760437, -10.548752, 14.805725, -8.065842, 16.914581, 4.368271, 16.937698, 6.620514, 14.502884, 6.4085236, -0.083724976, 9.326035, -0.22177124, 10.429443, -2.0848389, 10.432999, -3.9977875, 9.476517, -3.9995575, 9.391922, -9.929855, 5.0949097, -13.763748, -0.40434265, -14.013092)
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1910738837]
+[node name="Node" type="CanvasLayer" parent="CanvasLayer" unique_id=850151461]
+offset = Vector2(0, 500)
+transform = Transform2D(1, 0, 0, 1, 0, 500)
+script = ExtResource("22_5he1h")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Node" unique_id=1910738837]
 texture_filter = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 1.9999999
-offset_top = -481.9999
-offset_right = 44.0
-offset_bottom = -428.9999
+offset_left = -0.9999999
+offset_top = -482.0
+offset_right = 41.0
+offset_bottom = -429.0
 grow_vertical = 0
 scale = Vector2(7.8400006, 7.8400006)
 texture = ExtResource("18_wuoie")
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=419559274]
-offset_left = 9.0
-offset_top = 247.0
-offset_right = 69.0
-offset_bottom = 307.0
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Node" unique_id=419559274]
+offset_left = 6.0
+offset_top = 246.99991
+offset_right = 66.0
+offset_bottom = 306.9999
 texture = ExtResource("20_cpsxm")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/TextureRect2" unique_id=447558870]
+[node name="Label" type="Label" parent="CanvasLayer/Node/TextureRect2" unique_id=447558870]
 layout_mode = 0
 offset_left = 66.0
 offset_top = -1.0
@@ -311,11 +382,11 @@ theme_override_font_sizes/font_size = 25
 text = "Admin"
 vertical_alignment = 1
 
-[node name="OpenGame" type="Button" parent="CanvasLayer" unique_id=2144551545]
-offset_left = 2.0
-offset_top = 323.0
-offset_right = 182.0
-offset_bottom = 372.0
+[node name="OpenGame" type="Button" parent="CanvasLayer/Node" unique_id=2144551545]
+offset_left = -1.0
+offset_top = 322.9999
+offset_right = 179.0
+offset_bottom = 371.9999
 scale = Vector2(0.9200009, 0.9200009)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_3mrqo")
@@ -327,11 +398,11 @@ icon = ExtResource("20_cpsxm")
 alignment = 0
 expand_icon = true
 
-[node name="OpenText" type="Button" parent="CanvasLayer" unique_id=1059703817]
-offset_left = 2.0
-offset_top = 380.0
-offset_right = 182.0
-offset_bottom = 429.0
+[node name="OpenText" type="Button" parent="CanvasLayer/Node" unique_id=1059703817]
+offset_left = -1.0
+offset_top = 379.9999
+offset_right = 179.0
+offset_bottom = 428.9999
 scale = Vector2(0.9200009, 0.9200009)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_3mrqo")
@@ -343,11 +414,11 @@ icon = ExtResource("20_cpsxm")
 alignment = 0
 expand_icon = true
 
-[node name="OpenMusic" type="Button" parent="CanvasLayer" unique_id=230948569]
-offset_left = 2.0
-offset_top = 437.0
-offset_right = 182.0
-offset_bottom = 486.0
+[node name="OpenMusic" type="Button" parent="CanvasLayer/Node" unique_id=230948569]
+offset_left = -1.0
+offset_top = 436.9999
+offset_right = 179.0
+offset_bottom = 485.9999
 scale = Vector2(0.9200009, 0.9200009)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_3mrqo")
@@ -359,7 +430,7 @@ icon = ExtResource("20_cpsxm")
 alignment = 0
 expand_icon = true
 
-[node name="Button6" type="Button" parent="CanvasLayer" unique_id=907360473]
+[node name="Button6" type="Button" parent="CanvasLayer/Node" unique_id=907360473]
 visible = false
 offset_top = 495.0
 offset_right = 180.0
@@ -374,7 +445,7 @@ icon = ExtResource("20_cpsxm")
 alignment = 0
 expand_icon = true
 
-[node name="Button7" type="Button" parent="CanvasLayer" unique_id=200634835]
+[node name="Button7" type="Button" parent="CanvasLayer/Node" unique_id=200634835]
 visible = false
 offset_top = 552.0
 offset_right = 180.0
@@ -389,11 +460,11 @@ icon = ExtResource("20_cpsxm")
 alignment = 0
 expand_icon = true
 
-[node name="OpenSettings" type="Button" parent="CanvasLayer" unique_id=1179030661]
-offset_left = 182.0
-offset_top = 323.0
-offset_right = 362.0
-offset_bottom = 372.0
+[node name="OpenSettings" type="Button" parent="CanvasLayer/Node" unique_id=1179030661]
+offset_left = 179.0
+offset_top = 322.9999
+offset_right = 359.0
+offset_bottom = 371.9999
 scale = Vector2(0.76, 0.76)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_3mrqo")
@@ -405,11 +476,11 @@ icon = ExtResource("20_cpsxm")
 alignment = 0
 expand_icon = true
 
-[node name="OpenDocuments" type="Button" parent="CanvasLayer" unique_id=525242575]
-offset_left = 182.0
-offset_top = 366.0
-offset_right = 362.0
-offset_bottom = 415.0
+[node name="OpenDocuments" type="Button" parent="CanvasLayer/Node" unique_id=525242575]
+offset_left = 179.0
+offset_top = 365.9999
+offset_right = 359.0
+offset_bottom = 414.9999
 scale = Vector2(0.76, 0.76)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_3mrqo")
@@ -421,11 +492,11 @@ icon = ExtResource("20_cpsxm")
 alignment = 0
 expand_icon = true
 
-[node name="OpenFiles" type="Button" parent="CanvasLayer" unique_id=1532436296]
-offset_left = 182.0
-offset_top = 410.0
-offset_right = 362.0
-offset_bottom = 459.0
+[node name="OpenFiles" type="Button" parent="CanvasLayer/Node" unique_id=1532436296]
+offset_left = 179.0
+offset_top = 409.9999
+offset_right = 359.0
+offset_bottom = 458.9999
 scale = Vector2(0.76, 0.76)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_3mrqo")
@@ -437,11 +508,11 @@ icon = ExtResource("20_cpsxm")
 alignment = 0
 expand_icon = true
 
-[node name="Utility" type="Button" parent="CanvasLayer" unique_id=1699012471]
-offset_left = 182.0
-offset_top = 457.0
-offset_right = 362.0
-offset_bottom = 506.0
+[node name="Utility" type="Button" parent="CanvasLayer/Node" unique_id=1699012471]
+offset_left = 179.0
+offset_top = 456.9999
+offset_right = 359.0
+offset_bottom = 505.9999
 scale = Vector2(0.76, 0.76)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_3mrqo")
@@ -453,34 +524,33 @@ icon = ExtResource("20_8ktx7")
 alignment = 0
 expand_icon = true
 
-[node name="Schraubenzieher" type="Sprite2D" parent="CanvasLayer/Utility" unique_id=1738695814]
-texture_filter = 1
-position = Vector2(23.68422, 23.684204)
-rotation = -0.6897277
-scale = Vector2(0.9071777, 0.9071777)
-texture = ExtResource("20_w7ht3")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer/Utility" unique_id=987105756 node_paths=PackedStringArray("sprite2d") groups=["schraubenzieher"]]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer/Node/Utility" unique_id=987105756 node_paths=PackedStringArray("sprite2d")]
 script = ExtResource("26_bisgb")
 sprite2d = NodePath("Schraubenzieher")
+zerfallenerlaubt = true
 
-[node name="Schraubenzieher" type="Sprite2D" parent="CanvasLayer/Utility/CharacterBody2D" unique_id=691898557]
+[node name="Schraubenzieher" type="Sprite2D" parent="CanvasLayer/Node/Utility/CharacterBody2D" unique_id=691898557]
 texture_filter = 1
-position = Vector2(23.68422, 23.684204)
+position = Vector2(23.68422, 23.684364)
 rotation = -0.6897277
 scale = Vector2(0.9071777, 0.9071777)
 texture = ExtResource("20_w7ht3")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Utility/CharacterBody2D" unique_id=331954665]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Node/Utility/CharacterBody2D" unique_id=331954665]
 position = Vector2(6.578947, 9.210526)
 polygon = PackedVector2Array(6.578949, -5.2631836, 17.10527, 7.8947144, 17.10527, 10.526306, 18.421066, 9.21051, 21.052628, 11.842102, 19.736832, 14.473694, 28.947372, 26.315796, 31.578934, 27.631592, 32.89473, 30.263184, 30.263168, 32.894714, 27.631577, 31.57898, 26.31578, 28.947388, 19.736832, 19.736816, 17.10527, 17.105286, 14.473679, 18.421082, 11.842117, 15.78949, 13.157883, 14.473694, 11.842117, 13.157898, 10.526321, 13.157898, 0, 1.3157959, 0, -3.9473877, 2.6315765, -6.5789185)
 
-[node name="Shutdown" type="Button" parent="CanvasLayer" unique_id=72321363]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer/Node/Utility/CharacterBody2D" unique_id=1750789897 groups=["schraubenzieher"]]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CanvasLayer/Node/Utility/CharacterBody2D/CharacterBody2D" unique_id=521877621]
+polygon = PackedVector2Array(35.526337, 42.10547, 38.157898, 42.10547, 39.473694, 40.789673, 39.473694, 39.473877, 38.157898, 36.842285, 36.842102, 36.842285, 34.21054, 34.210693, 31.578949, 36.842285, 34.21054, 39.473877, 34.21054, 40.789673)
+
+[node name="Shutdown" type="Button" parent="CanvasLayer/Node" unique_id=72321363]
 texture_filter = 1
-offset_left = 286.0
-offset_top = 608.00006
-offset_right = 324.0
-offset_bottom = 646.00006
+offset_left = 283.0
+offset_top = 608.0
+offset_right = 321.0
+offset_bottom = 646.0
 scale = Vector2(0.90335166, 0.90335166)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
@@ -489,7 +559,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g4v7s")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
 script = ExtResource("24_hwsgv")
 
-[node name="Label" type="Label" parent="CanvasLayer/Shutdown" unique_id=2104122408]
+[node name="Label" type="Label" parent="CanvasLayer/Node/Shutdown" unique_id=2104122408]
 texture_filter = 1
 layout_mode = 0
 offset_left = -6.6419463
@@ -500,21 +570,21 @@ scale = Vector2(0.69168615, 0.69168615)
 theme_override_fonts/font = ExtResource("6_3mrqo")
 text = "Shutdown"
 
-[node name="Sprite2D" type="TextureRect" parent="CanvasLayer/Shutdown" unique_id=1136201019]
+[node name="Sprite2D" type="TextureRect" parent="CanvasLayer/Node/Shutdown" unique_id=1136201019]
 layout_mode = 0
 offset_top = -6.1035156e-05
 offset_right = 38.0
 offset_bottom = 37.99994
 texture = ExtResource("23_y5ctq")
 
-[node name="Sprite2D3" type="TextureRect" parent="CanvasLayer/Shutdown" unique_id=282455642]
+[node name="Sprite2D3" type="TextureRect" parent="CanvasLayer/Node/Shutdown" unique_id=282455642]
 layout_mode = 0
 offset_top = -6.1035156e-05
 offset_right = 38.0
 offset_bottom = 37.99994
 texture = ExtResource("21_hmewc")
 
-[node name="Sprite2D2" type="TextureRect" parent="CanvasLayer/Shutdown" unique_id=1419409854]
+[node name="Sprite2D2" type="TextureRect" parent="CanvasLayer/Node/Shutdown" unique_id=1419409854]
 visible = false
 layout_mode = 0
 offset_left = 2.2139778
@@ -524,81 +594,118 @@ offset_bottom = 35.21389
 scale = Vector2(1, 1.033)
 texture = ExtResource("23_0mevm")
 
-[node name="buttons" type="Control" parent="CanvasLayer/Shutdown" unique_id=662331939]
+[node name="buttons" type="Control" parent="CanvasLayer/Node/Shutdown" unique_id=662331939]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("29_suycs")
 
-[node name="Allebuttons" type="Sprite2D" parent="CanvasLayer/Shutdown/buttons" unique_id=897087883]
-texture_filter = 1
-position = Vector2(4.427948, 4.4278564)
-scale = Vector2(0.26844484, 0.26844484)
-texture = ExtResource("21_y5ctq")
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer/Node/Shutdown/buttons" unique_id=1064523650 node_paths=PackedStringArray("sprite2d") groups=["schraube"]]
+script = ExtResource("26_bisgb")
+sprite2d = NodePath("Allebuttons4")
+is_dragable = false
 
-[node name="Area2D" type="Area2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons" unique_id=810217311]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons/Area2D" unique_id=1506928308]
-polygon = PackedVector2Array(-8.247437, -4.1237793, -8.247437, -4.1237793, -4.1237793, -8.247559, 4.123657, -8.247559, 8.247437, -4.1237793, 8.247437, 4.123535, 4.123657, 8.247314, -4.1237793, 8.247314, -8.247437, 4.123535)
-
-[node name="Allebuttons2" type="Sprite2D" parent="CanvasLayer/Shutdown/buttons" unique_id=266052566]
-texture_filter = 1
-position = Vector2(33.209656, 4.4278564)
-scale = Vector2(0.26844484, 0.26844484)
-texture = ExtResource("21_y5ctq")
-
-[node name="Area2D" type="Area2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons2" unique_id=2130119781]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons2/Area2D" unique_id=411082132]
-polygon = PackedVector2Array(-8.247437, -4.1237793, -8.247437, -4.1237793, -4.1237793, -8.247559, 4.123657, -8.247559, 8.247437, -4.1237793, 8.247437, 4.123535, 4.123657, 8.247314, -4.1237793, 8.247314, -8.247437, 4.123535)
-
-[node name="Allebuttons3" type="Sprite2D" parent="CanvasLayer/Shutdown/buttons" unique_id=1331691525]
-texture_filter = 1
-position = Vector2(4.3615417, 33.14319)
-scale = Vector2(0.26844484, 0.26844484)
-texture = ExtResource("21_y5ctq")
-
-[node name="Area2D" type="Area2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons3" unique_id=1978374403]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons3/Area2D" unique_id=499115857]
-polygon = PackedVector2Array(-8.247437, -4.1237793, -8.247437, -4.1237793, -4.1237793, -8.247559, 4.123657, -8.247559, 8.247437, -4.1237793, 8.247437, 4.123535, 4.123657, 8.247314, -4.1237793, 8.247314, -8.247437, 4.123535)
-
-[node name="Allebuttons4" type="Sprite2D" parent="CanvasLayer/Shutdown/buttons" unique_id=1633321001]
+[node name="Allebuttons4" type="Sprite2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D" unique_id=1633321001]
 texture_filter = 1
 position = Vector2(33.14325, 33.14319)
-scale = Vector2(0.26844484, 0.26844484)
+scale = Vector2(0.3570472, 0.3570472)
 texture = ExtResource("21_y5ctq")
 
-[node name="Area2D" type="Area2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons4" unique_id=2129317147]
+[node name="Area2D" type="Area2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D/Allebuttons4" unique_id=2129317147]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Shutdown/buttons/Allebuttons4/Area2D" unique_id=1861962028]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D/Allebuttons4/Area2D" unique_id=1861962028]
 polygon = PackedVector2Array(-8.247437, -4.1237793, -8.247437, -4.1237793, -4.1237793, -8.247559, 4.123657, -8.247559, 8.247437, -4.1237793, 8.247437, 4.123535, 4.123657, 8.247314, -4.1237793, 8.247314, -8.247437, 4.123535)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer/Shutdown" unique_id=1521892910 groups=["chip_shutdown"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D" unique_id=745837187]
+position = Vector2(33.20966, 33.209595)
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="CanvasLayer/Node/Shutdown/buttons" unique_id=1176168970 node_paths=PackedStringArray("sprite2d") groups=["schraube"]]
+script = ExtResource("26_bisgb")
+sprite2d = NodePath("Allebuttons")
+is_dragable = false
+
+[node name="Allebuttons" type="Sprite2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D2" unique_id=897087883]
+texture_filter = 1
+position = Vector2(4.427948, 4.4278564)
+scale = Vector2(0.3570472, 0.3570472)
+texture = ExtResource("21_y5ctq")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D2/Allebuttons" unique_id=810217311]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D2/Allebuttons/Area2D" unique_id=1506928308]
+polygon = PackedVector2Array(-8.247437, -4.1237793, -8.247437, -4.1237793, -4.1237793, -8.247559, 4.123657, -8.247559, 8.247437, -4.1237793, 8.247437, 4.123535, 4.123657, 8.247314, -4.1237793, 8.247314, -8.247437, 4.123535)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D2" unique_id=967115996]
+position = Vector2(4.4279547, 4.427887)
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="CharacterBody2D3" type="CharacterBody2D" parent="CanvasLayer/Node/Shutdown/buttons" unique_id=2145760660 node_paths=PackedStringArray("sprite2d") groups=["schraube"]]
+script = ExtResource("26_bisgb")
+sprite2d = NodePath("Allebuttons2")
+is_dragable = false
+
+[node name="Allebuttons2" type="Sprite2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D3" unique_id=266052566]
+texture_filter = 1
+position = Vector2(33.209656, 4.4278564)
+scale = Vector2(0.3570472, 0.3570472)
+texture = ExtResource("21_y5ctq")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D3/Allebuttons2" unique_id=2130119781]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D3/Allebuttons2/Area2D" unique_id=411082132]
+polygon = PackedVector2Array(-8.247437, -4.1237793, -8.247437, -4.1237793, -4.1237793, -8.247559, 4.123657, -8.247559, 8.247437, -4.1237793, 8.247437, 4.123535, 4.123657, 8.247314, -4.1237793, 8.247314, -8.247437, 4.123535)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D3" unique_id=2013182455]
+position = Vector2(33.20966, 4.427887)
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="CharacterBody2D4" type="CharacterBody2D" parent="CanvasLayer/Node/Shutdown/buttons" unique_id=156764357 node_paths=PackedStringArray("sprite2d") groups=["schraube"]]
+script = ExtResource("26_bisgb")
+sprite2d = NodePath("Allebuttons3")
+is_dragable = false
+
+[node name="Allebuttons3" type="Sprite2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D4" unique_id=1331691525]
+texture_filter = 1
+position = Vector2(4.3615417, 33.14319)
+scale = Vector2(0.3570472, 0.3570472)
+texture = ExtResource("21_y5ctq")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D4/Allebuttons3" unique_id=1978374403]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D4/Allebuttons3/Area2D" unique_id=499115857]
+polygon = PackedVector2Array(-8.247437, -4.1237793, -8.247437, -4.1237793, -4.1237793, -8.247559, 4.123657, -8.247559, 8.247437, -4.1237793, 8.247437, 4.123535, 4.123657, 8.247314, -4.1237793, 8.247314, -8.247437, 4.123535)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D4" unique_id=1563192902]
+position = Vector2(4.4279547, 33.209595)
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer/Node/Shutdown" unique_id=1521892910 groups=["chip_shutdown"]]
 layer = 100
 visible = false
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer/Shutdown/CanvasLayer" unique_id=906145939 node_paths=PackedStringArray("sprite2d")]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer/Node/Shutdown/CanvasLayer" unique_id=906145939 node_paths=PackedStringArray("sprite2d") groups=["chip_shutdown"]]
 position = Vector2(285, 607.00006)
 scale = Vector2(0.90335166, 0.90335166)
 script = ExtResource("26_bisgb")
 sprite2d = NodePath("Sprite2D")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Shutdown/CanvasLayer/CharacterBody2D" unique_id=51409422]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Node/Shutdown/CanvasLayer/CharacterBody2D" unique_id=51409422]
 texture_filter = 1
 position = Vector2(19.926, 19.6)
 scale = Vector2(1.6721568, 1.6721568)
 texture = ExtResource("23_w2501")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Shutdown/CanvasLayer/CharacterBody2D" unique_id=228225979]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Node/Shutdown/CanvasLayer/CharacterBody2D" unique_id=228225979]
 position = Vector2(19.372284, 19.37207)
 shape = SubResource("RectangleShape2D_yf5fn")
 
-[node name="Logout" type="Button" parent="CanvasLayer" unique_id=49324547]
+[node name="Logout" type="Button" parent="CanvasLayer/Node" unique_id=49324547]
 texture_filter = 1
-offset_left = 237.0
-offset_top = 608.00006
-offset_right = 275.0
-offset_bottom = 646.00006
+offset_left = 234.0
+offset_top = 608.0
+offset_right = 272.0
+offset_bottom = 646.0
 scale = Vector2(0.90335166, 0.90335166)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_g4v7s")
@@ -607,25 +714,26 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g4v7s")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_g4v7s")
 script = ExtResource("22_jsoai")
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="CanvasLayer/Logout" unique_id=1683332845 groups=["logout_kappe"]]
+[node name="CanvasLayer2" type="CanvasLayer" parent="CanvasLayer/Node/Logout" unique_id=1683332845 groups=["logout_kappe"]]
 layer = 100
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer/Logout/CanvasLayer2" unique_id=1547022268 node_paths=PackedStringArray("sprite2d", "appmenu")]
-position = Vector2(253.00002, 624.00006)
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer/Node/Logout/CanvasLayer2" unique_id=1547022268 node_paths=PackedStringArray("sprite2d", "appmenu")]
+position = Vector2(247.00002, 627.00006)
 scale = Vector2(0.90335166, 0.90335166)
 script = ExtResource("26_bisgb")
 sprite2d = NodePath("Sprite2D")
-appmenu = NodePath("../../..")
+appmenu = NodePath("../../../..")
+"müllable" = true
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Logout/CanvasLayer2/CharacterBody2D" unique_id=1846796030]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Node/Logout/CanvasLayer2/CharacterBody2D" unique_id=1846796030]
 texture_filter = 1
 position = Vector2(1.2881851, 1.2881527)
 texture = ExtResource("21_7ged1")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Logout/CanvasLayer2/CharacterBody2D" unique_id=1937084118]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CanvasLayer/Node/Logout/CanvasLayer2/CharacterBody2D" unique_id=1937084118]
 polygon = PackedVector2Array(-17.711823, -15.497925, -17.711823, 17.711792, -15.497864, 19.92572, 17.711792, 19.92572, 19.925781, 17.711792, 19.925781, -15.497925, 17.711792, -17.711853, -15.497864, -17.711853)
 
-[node name="Label" type="Label" parent="CanvasLayer/Logout" unique_id=1226355006]
+[node name="Label" type="Label" parent="CanvasLayer/Node/Logout" unique_id=1226355006]
 texture_filter = 1
 layout_mode = 0
 offset_left = -5.534941
@@ -637,14 +745,14 @@ theme_override_fonts/font = ExtResource("6_3mrqo")
 text = "Log off"
 horizontal_alignment = 1
 
-[node name="Sprite2D" type="TextureRect" parent="CanvasLayer/Logout" unique_id=869150021]
+[node name="Sprite2D" type="TextureRect" parent="CanvasLayer/Node/Logout" unique_id=869150021]
 layout_mode = 0
 offset_top = -8.392334e-05
 offset_right = 38.0
 offset_bottom = 37.999916
 texture = ExtResource("23_y5ctq")
 
-[node name="Sprite2D3" type="TextureRect" parent="CanvasLayer/Logout" unique_id=1112600115]
+[node name="Sprite2D3" type="TextureRect" parent="CanvasLayer/Node/Logout" unique_id=1112600115]
 visible = false
 layout_mode = 0
 offset_left = 5.2
@@ -654,7 +762,7 @@ offset_bottom = 20.535
 scale = Vector2(1.6985049, 1.6985049)
 texture = ExtResource("23_w2501")
 
-[node name="Sprite2D2" type="TextureRect" parent="CanvasLayer/Logout" unique_id=975470411]
+[node name="Sprite2D2" type="TextureRect" parent="CanvasLayer/Node/Logout" unique_id=975470411]
 layout_mode = 0
 offset_left = 2.2139778
 offset_top = 2.213892
@@ -663,7 +771,7 @@ offset_bottom = 35.21389
 scale = Vector2(1, 1.033)
 texture = ExtResource("23_0mevm")
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Logout" unique_id=442760178]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Node/Logout" unique_id=442760178]
 visible = false
 layout_mode = 0
 offset_top = -6.1035156e-05
@@ -672,18 +780,18 @@ offset_bottom = 39.99994
 scale = Vector2(0.9557205, 0.9557205)
 texture = ExtResource("21_7ged1")
 
-[node name="Area2D" type="Area2D" parent="CanvasLayer/Logout" unique_id=1774984592]
+[node name="Area2D" type="Area2D" parent="CanvasLayer/Node/Logout" unique_id=1774984592]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Logout/Area2D" unique_id=1019750293]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Node/Logout/Area2D" unique_id=1019750293]
 position = Vector2(19.372284, 19.37207)
 shape = SubResource("RectangleShape2D_yf5fn")
 
-[node name="Button11" type="Button" parent="CanvasLayer" unique_id=1095656910]
+[node name="Button11" type="Button" parent="CanvasLayer/Node" unique_id=1095656910]
 texture_filter = 1
-offset_left = 284.0
-offset_top = 243.0
-offset_right = 322.0
-offset_bottom = 281.0
+offset_left = 281.0
+offset_top = 242.99991
+offset_right = 319.0
+offset_bottom = 280.9999
 theme_override_colors/icon_hover_color = Color(0.98795444, 0.89503646, 0.8886685, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_57qmd")
@@ -692,28 +800,40 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_57qmd")
 theme_override_styles/focus = SubResource("StyleBoxFlat_57qmd")
 icon = ExtResource("14_bvhbk")
 
-[node name="TitleOs" type="Sprite2D" parent="CanvasLayer" unique_id=551805747]
+[node name="TitleOs" type="Sprite2D" parent="CanvasLayer/Node" unique_id=551805747]
 visible = false
 texture_filter = 1
 position = Vector2(498, 450)
 texture = ExtResource("31_gebyw")
 
+[node name="Shaderlayer" type="CanvasLayer" parent="." unique_id=1370377779]
+
+[node name="Shaderrect" type="ColorRect" parent="Shaderlayer" unique_id=368398496]
+process_mode = 3
+visible = false
+material = SubResource("ShaderMaterial_5he1h")
+offset_left = -321.0
+offset_top = -209.0
+offset_right = 1794.0
+offset_bottom = 981.0
+mouse_behavior_recursive = 1
+
 [connection signal="mouse_entered" from="Narrator/CanvasLayer/Szene1/Panel" to="Narrator/CanvasLayer/Szene1/Panel" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Narrator/CanvasLayer/Szene1/Panel" to="Narrator/CanvasLayer/Szene1/Panel" method="_on_mouse_exited"]
 [connection signal="pressed" from="Control/CanvasLayer/Button" to="Control/CanvasLayer" method="_on_button_pressed"]
 [connection signal="body_entered" from="CanvasLayer/Mülleimer/Area2D" to="CanvasLayer/Mülleimer" method="_on_area_2d_body_entered"]
-[connection signal="pressed" from="CanvasLayer/OpenGame" to="CanvasLayer" method="_on_open_game_pressed"]
-[connection signal="pressed" from="CanvasLayer/OpenText" to="CanvasLayer" method="_on_open_text_pressed"]
-[connection signal="pressed" from="CanvasLayer/OpenMusic" to="CanvasLayer" method="_on_open_music_pressed"]
-[connection signal="pressed" from="CanvasLayer/OpenSettings" to="CanvasLayer" method="_on_open_settings_pressed"]
-[connection signal="pressed" from="CanvasLayer/OpenDocuments" to="CanvasLayer" method="_on_open_documents_pressed"]
-[connection signal="pressed" from="CanvasLayer/OpenFiles" to="CanvasLayer" method="_on_open_files_pressed"]
-[connection signal="pressed" from="CanvasLayer/Shutdown" to="CanvasLayer" method="_on_shutdown_pressed"]
-[connection signal="body_entered" from="CanvasLayer/Shutdown/buttons/Allebuttons/Area2D" to="CanvasLayer/Shutdown" method="_on_area_schraube1_entered"]
-[connection signal="body_entered" from="CanvasLayer/Shutdown/buttons/Allebuttons2/Area2D" to="CanvasLayer/Shutdown" method="_on_area_schraube2_entered"]
-[connection signal="body_entered" from="CanvasLayer/Shutdown/buttons/Allebuttons3/Area2D" to="CanvasLayer/Shutdown" method="_on_area_schraube3_entered"]
-[connection signal="body_entered" from="CanvasLayer/Shutdown/buttons/Allebuttons4/Area2D" to="CanvasLayer/Shutdown" method="_on_area_schraube4_entered"]
-[connection signal="area_entered" from="CanvasLayer/Logout/Area2D" to="CanvasLayer/Logout" method="_on_area_2d_area_entered"]
-[connection signal="body_entered" from="CanvasLayer/Logout/Area2D" to="CanvasLayer/Logout" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="CanvasLayer/Logout/Area2D" to="CanvasLayer/Logout" method="_on_area_2d_body_exited"]
-[connection signal="pressed" from="CanvasLayer/Button11" to="CanvasLayer" method="_on_button_11_pressed"]
+[connection signal="pressed" from="CanvasLayer/Node/OpenGame" to="CanvasLayer" method="_on_open_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/Node/OpenText" to="CanvasLayer" method="_on_open_text_pressed"]
+[connection signal="pressed" from="CanvasLayer/Node/OpenMusic" to="CanvasLayer" method="_on_open_music_pressed"]
+[connection signal="pressed" from="CanvasLayer/Node/OpenSettings" to="CanvasLayer" method="_on_open_settings_pressed"]
+[connection signal="pressed" from="CanvasLayer/Node/OpenDocuments" to="CanvasLayer" method="_on_open_documents_pressed"]
+[connection signal="pressed" from="CanvasLayer/Node/OpenFiles" to="CanvasLayer" method="_on_open_files_pressed"]
+[connection signal="pressed" from="CanvasLayer/Node/Shutdown" to="CanvasLayer" method="_on_shutdown_pressed"]
+[connection signal="body_entered" from="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D/Allebuttons4/Area2D" to="CanvasLayer/Node/Shutdown" method="_on_area_schraube4_entered"]
+[connection signal="body_entered" from="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D2/Allebuttons/Area2D" to="CanvasLayer/Node/Shutdown" method="_on_area_schraube1_entered"]
+[connection signal="body_entered" from="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D3/Allebuttons2/Area2D" to="CanvasLayer/Node/Shutdown" method="_on_area_schraube2_entered"]
+[connection signal="body_entered" from="CanvasLayer/Node/Shutdown/buttons/CharacterBody2D4/Allebuttons3/Area2D" to="CanvasLayer/Node/Shutdown" method="_on_area_schraube3_entered"]
+[connection signal="area_entered" from="CanvasLayer/Node/Logout/Area2D" to="CanvasLayer/Node/Logout" method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="CanvasLayer/Node/Logout/Area2D" to="CanvasLayer/Node/Logout" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="CanvasLayer/Node/Logout/Area2D" to="CanvasLayer/Node/Logout" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="CanvasLayer/Node/Button11" to="CanvasLayer" method="_on_button_11_pressed"]

@@ -44,3 +44,29 @@ func _on_Timer_timeout() -> void:
 func _on_apply_pressed() -> void:
 	SettingsManager.apply_settings()
 	SettingsManager.save_settings()
+
+
+func _on_shader_selected(index: int) -> void:
+	var shader_rect = get_tree().current_scene.get_node("Shaderlayer/Shaderrect")
+
+	var shader_paths = [
+		null, 
+		"res://addons/godot_retro/shaders/standard/tv.gdshader",
+		"res://addons/godot_retro/shaders/standard/vhs.gdshader",
+		"res://addons/godot_retro/shaders/standard/crt_basic.gdshader",
+		"res://addons/godot_retro/shaders/standard/dithering.gdshader",
+		"res://addons/godot_retro/shaders/standard/glitch_simple.gdshader",
+        "res://addons/godot_retro/shaders/standard/monochrome.gdshader"
+	]
+
+	var path = shader_paths[index]
+
+	if path == null:
+		shader_rect.hide()
+		return
+
+	# Shader setzen
+	shader_rect.show()
+	var mat := ShaderMaterial.new()
+	mat.shader = load(path)
+	shader_rect.material = mat
